@@ -1,0 +1,66 @@
+/*---------------------------------------------------------------------
+    In this CSS file you will find the style for the about us page.
+---------------------------------------------------------------------*/
+
+/* Here you can import all stylesheets */
+@import 'main.css';
+@import 'header.css';
+@import 'footer.css';
+@import 'animaties.css';
+
+
+/*--------------------------------------------------
+    CSS for ...
+---------------------------------------------------*/
+
+
+
+/*--------------------------------------------------
+    CSS for ...
+---------------------------------------------------*/
+
+
+
+/*--------------------------------------------------
+    The breakpoints
+---------------------------------------------------*/
+
+/* Intermediate version of mobile and tablet (450px) */
+@media screen and (min-width: 450px) {
+    
+}
+
+/* Additional intermediate version of mobile and tablet (510px) */
+@media (min-width: 510px) {
+    
+}
+
+/* Tablet version (768px) */
+@media screen and (min-width: 768px) {
+
+    /*----------------------------------------*/
+}
+
+/* Laptop version (1024px) */
+@media screen and (min-width: 1024px) {
+
+    /*----------------------------------------*/
+}
+
+/* Larger laptop version (1280px) */
+@media screen and (min-width: 1280PX) {
+
+    /*----------------------------------------*/
+}
+
+/* Intermediate version of laptop and desktop (1680px) */
+@media screen and (min-width: 1680PX) {
+
+    /*----------------------------------------*/
+}
+
+/* Desktop version (1920px) */
+@media screen and (min-width: 1920PX) {
+    
+    /*----------------------------------------*/
+}

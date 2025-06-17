@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Stuur Engelse URLs naar Engelse 404
+RewriteCond %{REQUEST_URI} ^/en/
+RewriteCond %{DOCUMENT_ROOT}/en%{REQUEST_URI} !-f
+RewriteCond %{DOCUMENT_ROOT}/en%{REQUEST_URI} !-d
+RewriteRule ^en/.*$ /en/404.html [L]
+
+# Alle andere 404s naar NL versie
+ErrorDocument 404 /404.html

@@ -1,0 +1,324 @@
+/*---------------------------------------------------------------------------------------
+    In dit CSS-bestand vindt je de stijl voor de footer die voor elke pagina nodig is
+----------------------------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------
+    Button to return to the top of the page
+---------------------------------------------------*/
+div.topArrow {
+    grid-template-rows: repeat(1, 1fr);
+    transition: 1s ease-in-out;
+    margin-top: 56px;
+    margin-bottom: 16px;
+}
+
+a.topArrow {
+    display: block;
+    height: 40px; 
+    width: 40px;
+    margin-left: auto;
+    margin-right: 16px;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    background: var(--secondary) url(../assets/icons/Arrow.svg) no-repeat center 50%;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.48);
+}
+
+a.topArrow:hover {
+    background-position-y: 40%;
+    cursor: pointer;
+}
+
+
+/*--------------------------------------------------
+    De inhoud van de footer
+---------------------------------------------------*/
+/* De grote, kleur en positie van de footer */
+footer {
+    position: relative;
+    width: 100%;
+    background-color: var(--secondary);
+
+    /* Dit zorgt ervoor dat de achtergrond van de footer schermbreed blijft en er niet binnen/ buiten gaat */
+    --child-width: 100vw;
+    margin-left: calc(-.5 * var(--child-width) + 50%);
+    width: var(--child-width);
+}
+
+.footSocials img {
+    height: 75px;
+    margin-bottom: 16px;
+}
+
+.socials a {
+    margin-right: 0.5rem;
+    font-size: 1.85rem;
+    color: var(--spaceCadet);
+}
+
+/* Hier wordt de tekst opmaak binnen de footer bepaald */
+
+/* De opmaak van de menu items */
+.footNav li {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.footNav li.first {
+    margin-top: 0px;
+}
+
+.footNav li.last {
+    margin-bottom: 0px;
+}
+
+/* De opmaak van de contactgegevens */
+.footContact div {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.footContact div div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footContact div div.middle {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.footContact div div img {
+    height: 22px;
+    width: auto;
+    margin-right: 20px;
+}
+
+a.avg {
+    color: var(--spaceCadet);
+    text-decoration: underline;
+}
+
+.copy {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #FFF;
+}
+
+
+/*--------------------------------------------------
+    Het grid systeem
+---------------------------------------------------*/
+/* Flexbox toepassen */
+.footgrid {
+    display: flex;
+    flex-wrap: wrap;
+	flex-direction: column;
+	row-gap: 32px;
+    justify-content: center;
+
+    margin-left: auto;
+    margin-right: auto;
+    
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+/* Het grid toepassen */
+.footSocials, .footerMenu {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+
+/*--------------------------------------------------
+    De breekpunten
+---------------------------------------------------*/
+
+@media (min-width: 385px) {
+    p.copy br.on {
+        display: none;
+    }
+}
+
+/* Tussenversie van mobiel en tablet (480px) */
+@media (min-width: 480px) {
+    /* De keep & korrel */
+    div.topArrow {
+        margin-top: 68px;
+    }
+    /*----------------------------------------*/
+
+    .copy {
+        padding-bottom: 36px;
+    }
+
+    /* Het footer grid systeem */
+    .footgrid {
+        padding-left: 22px;
+        padding-right: 22px;
+        padding-top: 32px;
+    }
+}
+
+/* Tablet-versie (768px) */
+@media (min-width: 768px) {
+    /* De keep & korrel */
+    div.topArrow {
+        margin-top: 88px;
+    }
+
+    a.topArrow {
+        height: 44px; 
+        width: 44px;
+    }
+    /*----------------------------------------*/
+
+    .copy {
+        padding-bottom: 40px;
+    }
+
+    /* Het footer grid systeem */
+    .footgrid {
+        flex-direction: row;
+        column-gap: 20px;
+        align-items: center;
+        padding-left: 36px;
+        padding-right: 36px;
+        padding-top: 40px;
+    }
+    
+    .footerMenu, .footAdres {
+        flex-basis: 33%;
+    }
+    
+    .footContact {
+        max-width: 70%;
+    }
+}
+
+/* Laptop-versie (1024px) */
+@media (min-width: 1024px) {
+    /* De keep & korrel */
+    div.topArrow {
+        margin-top: 104px;
+    }
+
+    a.topArrow {
+        height: 48px; 
+        width: 48px;
+    }
+    /*----------------------------------------*/
+
+    .copy {
+        padding-bottom: 42px;
+    }
+
+    /* Het footer grid systeem */
+    .footgrid {
+        flex-wrap: nowrap;
+        column-gap: 56px;
+        padding-top: 48px;
+        padding-bottom: 40px;
+        padding-left: 56px;
+        padding-right: 56px;
+    }
+
+    .footerMenu {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .footContact {
+        flex-basis: 33%;
+        max-width: 100%;
+        text-align: left;
+    }
+}
+
+/* Grotere laptopversie (1280px) */
+@media (min-width: 1280PX) {
+    /* De keep & korrel */
+    div.topArrow {
+        margin-top: 120px;
+    }
+
+    a.topArrow {
+        height: 52px; 
+        width: 52px;
+    }
+    /*----------------------------------------*/
+
+    .copy {
+        padding-bottom: 44px;
+    }
+
+    /* Het footer grid systeem */
+    .footgrid {
+        column-gap: 64px;
+        padding-top: 40px;
+        padding-left: 120px;
+        padding-right: 120px;
+        padding-top: 56px;
+    }
+}
+
+/* Tussenversie van laptop en desktop (1600px) */
+@media (min-width: 1600PX) {
+    /* De keep & korrel */
+    div.topArrow {
+        margin-top: 136px;
+    }
+
+    a.topArrow {
+        height: 56px; 
+        width: 56px;
+    }
+    /*----------------------------------------*/
+
+    .copy {
+        padding-bottom: 46px;
+    }
+
+    /* Het footer grid systeem */
+    .footgrid {
+        column-gap: 80px;
+        padding-left: 200px;
+        padding-right: 200px;
+        padding-top: 60px;
+        padding-bottom: 48px;
+        max-width: 1280px;
+    }
+}
+
+/* Desktop versie (1920px) */
+@media (min-width: 1920PX) {
+    /* De keep & korrel */
+    div.topArrow {
+        margin-top: 144px;
+    }
+    /*----------------------------------------*/
+
+    .copy {
+        padding-bottom: 48px;
+    }
+    
+    /* Het footer grid systeem */
+    .footgrid {
+        column-gap: 96px;
+        padding-left: 256px;
+        padding-right: 256px;
+        padding-top: 64px;
+        max-width: 1408px;
+    }
+}
