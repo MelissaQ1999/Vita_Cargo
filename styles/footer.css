@@ -140,6 +140,10 @@ a.avg {
     text-align: center;
 }
 
+.footContact {
+    flex-basis: 100%;
+}
+
 
 /*--------------------------------------------------
     De breekpunten
@@ -158,10 +162,6 @@ a.avg {
         margin-top: 68px;
     }
     /*----------------------------------------*/
-
-    .copy {
-        padding-bottom: 36px;
-    }
 
     /* Het footer grid systeem */
     .footgrid {
@@ -185,7 +185,8 @@ a.avg {
     /*----------------------------------------*/
 
     .copy {
-        padding-bottom: 40px;
+        padding-top: 24px;
+        padding-bottom: 24px;
     }
 
     /* Het footer grid systeem */
@@ -198,7 +199,7 @@ a.avg {
         padding-top: 40px;
     }
     
-    .footerMenu, .footAdres {
+    .footSocials, .footerMenu {
         flex-basis: 33%;
     }
     
@@ -220,10 +221,6 @@ a.avg {
     }
     /*----------------------------------------*/
 
-    .copy {
-        padding-bottom: 42px;
-    }
-
     /* Het footer grid systeem */
     .footgrid {
         flex-wrap: nowrap;
@@ -234,15 +231,15 @@ a.avg {
         padding-right: 56px;
     }
 
-    .footerMenu {
+    nav.footerMenu {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
+        text-align: left;
     }
 
     .footContact {
         flex-basis: 33%;
         max-width: 100%;
-        text-align: left;
     }
 }
 
@@ -258,10 +255,6 @@ a.avg {
         width: 52px;
     }
     /*----------------------------------------*/
-
-    .copy {
-        padding-bottom: 44px;
-    }
 
     /* Het footer grid systeem */
     .footgrid {
@@ -285,9 +278,10 @@ a.avg {
         width: 56px;
     }
     /*----------------------------------------*/
-
+    
     .copy {
-        padding-bottom: 46px;
+        padding-top: 28px;
+        padding-bottom: 28px;
     }
 
     /* Het footer grid systeem */
@@ -308,10 +302,6 @@ a.avg {
         margin-top: 144px;
     }
     /*----------------------------------------*/
-
-    .copy {
-        padding-bottom: 48px;
-    }
     
     /* Het footer grid systeem */
     .footgrid {
