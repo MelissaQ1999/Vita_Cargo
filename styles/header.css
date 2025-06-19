@@ -1,7 +1,7 @@
 /*--------------------------------------------------------------------------------------
-    In dit CSS-bestand vindt je de stijl voor de header die voor elke pagina nodig is
+    In this CSS file you will find the style needed for the header on each page
 ---------------------------------------------------------------------------------------*/
-/* De grote, kleur en positie van de header worden hier bepaald */
+/* The size, color and position of the header are determined here */
 header {
     background-color: var(--secondary);
     box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.2);
@@ -12,7 +12,7 @@ header {
     z-index: 100;
 }
 
-/* Dit activeert wanneer het hamburgermenu actief is */
+/* This activates when the hamburger menu is active */
 header.act {
     position: static;
 }
@@ -21,7 +21,7 @@ header.act {
     height: 100%;
 }
 
-/* De positie en grootte van het logo */
+/* The position and size of the logo */
 a.logo {
     display: flex;
     align-items: center;
@@ -40,7 +40,10 @@ a.logo.act {
     z-index: 101;
 }
 
-/* De hamburgermenu button */
+
+/*--------------------------------------------------
+    The hamburger menu button
+---------------------------------------------------*/
 .menuBtn {
     height: 40px;
     width: 40px;
@@ -50,6 +53,7 @@ a.logo.act {
     z-index: 101;
 }
 
+/* The lines that form the hamburger menu */
 .menuBtn > span {
     background-color: var(--spaceCadet);
     border-radius: 1px;
@@ -83,7 +87,7 @@ a.logo.act {
     bottom: -8px;
 }
 
-/* Dit activeert wanneer het hamburgermenu actief is */
+/* This activates when the hamburger menu is active */
 .menuBtn.act > span {
     height: 0;
 }
@@ -102,7 +106,10 @@ a.logo.act {
     transform: rotate(-45deg);
 }
 
-/* Hoofd menu block */
+
+/*--------------------------------------------------
+    Main menu block
+---------------------------------------------------*/
 .mainMenu {
     background-color: var(--secondary);
     position: absolute;
@@ -117,7 +124,7 @@ a.logo.act {
     transform: translate(0px, -10px);
 }
 
-/* Dit activeert wanneer het hamburgermenu actief is */
+/* This activates when the hamburger menu is active */
 .mainMenu.act {
     position: fixed;
     opacity: 1;
@@ -131,21 +138,21 @@ a.logo.act {
     transform: translateX(0);
 }
 
-/* De positie van de menu items */
+/* The position of the menu items */
 .mainMenu ul.nav {
     top: 0;
     margin-top: 100px;
     margin-bottom: 50px;
 }
 
-/* De animatie op de menu items */
+/* The animation on the menu items */
 .mainMenu li {
     padding: 12px 0;
     transition: all 400ms 510ms;
     opacity: 0;
 }
 
-/* Positie van de submenu items */
+/* If submenu items are added, the position is determined here */
 /* ul.subNav {
     margin-bottom: 6px;
 }
@@ -159,7 +166,7 @@ ul.subNav li.first {
 } */
 
 
-/* De opmaak van de hoofdmenu items in normale staat */
+/* The layout of the main menu items in normal state */
 a.nav-item {
     color: var(--battleshipGray);
     fill: var(--battleshipGray);
@@ -170,20 +177,20 @@ a.nav-item {
     text-decoration: none;
 }
 
-/* De opmaak van de hoofdmenu items als je er overheen beweegd */
+/* The layout of the main menu items when you hover over them */
 a.nav-item:hover {
     color: var(--primary);
     fill: var(--primary);
     cursor: pointer;
 }
 
-/* De opmaak van de hoofdmenu items wanneer deze actief is */
+/* The layout of the main menu items when active */
 #selectedMain {
     color: var(--primary);
     font-weight: bold;
 }
 
-/* De opmaak van de submenu items in normale staat */
+/* If submenu items are added, you can change the layout of the normal state here */
 /* a.subNav-item {
     color: var(--lightGray);
     display: inline-block;
@@ -192,20 +199,20 @@ a.nav-item:hover {
     line-height: 20px;
 } */
 
-/* De opmaak van de submenu items als je er overheen beweegd */
+/* If submenu items are added, you can change the layout of the hover state here */
 /* a.subNav-item:hover {
     color: var(--primary);
     cursor: pointer;
 } */
 
-/* De opmaak van de submenu items wanneer deze actief is */
+/* If submenu items are added, you can change the layout of the active state here */
 /* #selectedSub {
     color: var(--primary);
     font-weight: bold;
     text-decoration: underline;
 } */
 
-/* De lijnen tussen de menu items */
+/* The lines between the menu items */
 span.menuDivider {
     display: block;
     background-color: var(--battleshipGray);
@@ -222,7 +229,7 @@ span.menuDivider {
     width: 220px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px; /* Ruimte boven de taal switch in het hamburgermenu */
+    margin-top: 20px;
 }
 
 .lang-switch a {
@@ -241,28 +248,32 @@ span.menuDivider {
     De breekpunten
 ---------------------------------------------------*/
 
-/* Tussenversie van mobiel en tablet (480px) */
+/* Intermediate version of mobile and tablet (480px) */
 @media (min-width: 480px) {
     header {
         height: 64px;
     }
 
+    /* The hamburger menu button */
     .menuBtn {
         top: 12.5px;
         right: 26px;
     }
 
+    /* The position and size of the logo */
     a.logo {
         margin-left: 22px;
         height: 64px;
     }
 }
 
-/* Tablet-versie (768px) */
+/* Tablet version (768px) */
 @media (min-width: 768px) {
     header {
         height: 72px;
     }
+
+    /* The hamburger menu button */
     .menuBtn {
         right: 44px;
         top: 12px;
@@ -286,6 +297,7 @@ span.menuDivider {
         height: 4px;
     }
 
+    /* The position and size of the logo */
     a.logo {
         margin-left: 36px;
         height: 72px;
@@ -296,7 +308,7 @@ span.menuDivider {
     }
 }
 
-/* Laptop-versie (1024px) */
+/* Laptop version (1024px) */
 @media (min-width: 1024px) {
     header {
         height: 86px;
@@ -314,6 +326,12 @@ span.menuDivider {
         align-items: center;
     }
 
+    /* The hamburger menu button is removed */
+    .menuBtn {
+        display: none;
+    }
+
+    /* The position and size of the logo */
     a.logo {
         height: 86px;
         margin-left: 0px;
@@ -322,11 +340,9 @@ span.menuDivider {
     a.logo img {
         height: 52px;
     }
+    /*----------------------------------------*/
 
-    .menuBtn {
-        display: none;
-    }
-
+    /* Main menu parts */
     .mainMenu {
         position: relative;
         height: auto;
@@ -379,8 +395,8 @@ span.menuDivider {
 
     .lang-switch {
         width: auto;
-        margin-left: auto; /* Zorgt ervoor dat het naar rechts uitgelijnd is */
-        margin-top: 0; /* Verwijder de marge boven in desktop */
+        margin-left: auto;
+        margin-top: 0;
     }
 
     .lang-switch a svg {
@@ -389,7 +405,7 @@ span.menuDivider {
     }
 }
 
-/* Grotere laptopversie (1280px) */
+/* Larger laptop version (1280px) */
 @media (min-width: 1280PX) {
     header {
         height: 92px;
@@ -400,6 +416,7 @@ span.menuDivider {
         padding-right: 120px;
     }
 
+    /* The position and size of the logo */
     a.logo {
         height: 92px;
     }
@@ -407,13 +424,15 @@ span.menuDivider {
     a.logo img {
         height: 56px;
     }
+    /*----------------------------------------*/
 
+    /* Main menu part */
     .mainMenu li {
         margin-right: 36px;
     }
 }
 
-/* Tussenversie van laptop en desktop (1600px) */
+/* Intermediate version of laptop and desktop (1600px) */
 @media (min-width: 1600PX) {
     header {
         height: 104px;
@@ -425,14 +444,17 @@ span.menuDivider {
         max-width: 1280px
     }
 
+    /* The position and size of the logo */
     a.logo {
         height: 104px;
     }
 
     a.logo img {
-        height: 64px;
+        height: 66px;
     }
+    /*----------------------------------------*/
 
+    /* Main menu parts */
     .mainMenu li {
         margin-right: 40px;
     }
@@ -446,7 +468,7 @@ span.menuDivider {
     }
 }
 
-/* Desktop versie (1920px) */
+/* Desktop version (1920px) */
 @media (min-width: 1920PX) {
     header {
         height: 120px;
@@ -456,7 +478,12 @@ span.menuDivider {
         max-width: 1408px;
     }
 
+    /* The position and size of the logo */
+    a.logo {
+        height: 120px;
+    }
+
     a.logo img {
-        height: 105px;
+        height: 78px;
     }
 }

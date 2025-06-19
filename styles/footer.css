@@ -1,6 +1,6 @@
-/*---------------------------------------------------------------------------------------
-    In dit CSS-bestand vindt je de stijl voor de footer die voor elke pagina nodig is
-----------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------
+    In this CSS file you will find the style needed for the footer on each page
+-------------------------------------------------------------------------------------*/
 
 
 /*--------------------------------------------------
@@ -33,20 +33,21 @@ a.topArrow:hover {
 
 
 /*--------------------------------------------------
-    De inhoud van de footer
+    The content of the footer
 ---------------------------------------------------*/
-/* De grote, kleur en positie van de footer */
+/* The size, color and position of the footer */
 footer {
     position: relative;
     width: 100%;
     background-color: var(--secondary);
 
-    /* Dit zorgt ervoor dat de achtergrond van de footer schermbreed blijft en er niet binnen/ buiten gaat */
+    /* This ensures that the footer background remains screen width and does not go in/out of it. */
     --child-width: 100vw;
     margin-left: calc(-.5 * var(--child-width) + 50%);
     width: var(--child-width);
 }
 
+/* The layout of the logo and the socials */
 .footSocials img {
     height: 75px;
     margin-bottom: 16px;
@@ -58,9 +59,7 @@ footer {
     color: var(--spaceCadet);
 }
 
-/* Hier wordt de tekst opmaak binnen de footer bepaald */
-
-/* De opmaak van de menu items */
+/* The layout of the menu items */
 .footNav li {
     margin-top: 8px;
     margin-bottom: 8px;
@@ -74,7 +73,7 @@ footer {
     margin-bottom: 0px;
 }
 
-/* De opmaak van de contactgegevens */
+/* The layout of the contact details */
 .footContact div {
     display: flex;
     flex-direction: column;
@@ -100,6 +99,7 @@ footer {
     margin-right: 20px;
 }
 
+/* The format of the copywrite line */
 a.avg {
     color: var(--spaceCadet);
     text-decoration: underline;
@@ -117,7 +117,7 @@ a.avg {
 /*--------------------------------------------------
     Het grid systeem
 ---------------------------------------------------*/
-/* Flexbox toepassen */
+/* Apply Flexbox */
 .footgrid {
     display: flex;
     flex-wrap: wrap;
@@ -134,7 +134,7 @@ a.avg {
     padding-bottom: 24px;
 }
 
-/* Het grid toepassen */
+/* Apply the grid */
 .footSocials, .footerMenu {
     flex-basis: 100%;
     text-align: center;
@@ -155,25 +155,26 @@ a.avg {
     }
 }
 
-/* Tussenversie van mobiel en tablet (480px) */
+/* Intermediate version of mobile and tablet (480px) */
 @media (min-width: 480px) {
-    /* De keep & korrel */
+    /* Return to the top button */
     div.topArrow {
         margin-top: 68px;
     }
     /*----------------------------------------*/
 
-    /* Het footer grid systeem */
+    /* The footer grid system */
     .footgrid {
         padding-left: 22px;
         padding-right: 22px;
         padding-top: 32px;
+        padding-bottom: 32px;
     }
 }
 
-/* Tablet-versie (768px) */
+/* Tablet version (768px) */
 @media (min-width: 768px) {
-    /* De keep & korrel */
+    /* Return to the top button */
     div.topArrow {
         margin-top: 88px;
     }
@@ -189,7 +190,7 @@ a.avg {
         padding-bottom: 24px;
     }
 
-    /* Het footer grid systeem */
+    /* The footer grid system */
     .footgrid {
         flex-direction: row;
         column-gap: 20px;
@@ -197,6 +198,7 @@ a.avg {
         padding-left: 36px;
         padding-right: 36px;
         padding-top: 40px;
+        padding-bottom: 40px;
     }
     
     .footSocials, .footerMenu {
@@ -208,9 +210,9 @@ a.avg {
     }
 }
 
-/* Laptop-versie (1024px) */
+/* Laptop version (1024px) */
 @media (min-width: 1024px) {
-    /* De keep & korrel */
+    /* Return to the top button */
     div.topArrow {
         margin-top: 104px;
     }
@@ -221,14 +223,14 @@ a.avg {
     }
     /*----------------------------------------*/
 
-    /* Het footer grid systeem */
+    /* The footer grid system */
     .footgrid {
         flex-wrap: nowrap;
         column-gap: 56px;
-        padding-top: 48px;
-        padding-bottom: 40px;
         padding-left: 56px;
         padding-right: 56px;
+        padding-top: 48px;
+        padding-bottom: 48px;
     }
 
     nav.footerMenu {
@@ -243,9 +245,9 @@ a.avg {
     }
 }
 
-/* Grotere laptopversie (1280px) */
+/* Larger laptop version (1280px) */
 @media (min-width: 1280PX) {
-    /* De keep & korrel */
+    /* Return to the top button */
     div.topArrow {
         margin-top: 120px;
     }
@@ -256,19 +258,19 @@ a.avg {
     }
     /*----------------------------------------*/
 
-    /* Het footer grid systeem */
+    /* The footer grid system */
     .footgrid {
         column-gap: 64px;
-        padding-top: 40px;
         padding-left: 120px;
         padding-right: 120px;
         padding-top: 56px;
+        padding-bottom: 56px;
     }
 }
 
-/* Tussenversie van laptop en desktop (1600px) */
+/* Intermediate version of laptop and desktop (1600px) */
 @media (min-width: 1600PX) {
-    /* De keep & korrel */
+    /* Return to the top button */
     div.topArrow {
         margin-top: 136px;
     }
@@ -284,31 +286,32 @@ a.avg {
         padding-bottom: 28px;
     }
 
-    /* Het footer grid systeem */
+    /* The footer grid system */
     .footgrid {
+        max-width: 1280px;
         column-gap: 80px;
         padding-left: 200px;
         padding-right: 200px;
         padding-top: 60px;
-        padding-bottom: 48px;
-        max-width: 1280px;
+        padding-bottom: 60px;
     }
 }
 
-/* Desktop versie (1920px) */
+/* Desktop version (1920px) */
 @media (min-width: 1920PX) {
-    /* De keep & korrel */
+    /* Return to the top button */
     div.topArrow {
         margin-top: 144px;
     }
     /*----------------------------------------*/
     
-    /* Het footer grid systeem */
+    /* The footer grid system */
     .footgrid {
+        max-width: 1408px;
         column-gap: 96px;
         padding-left: 256px;
         padding-right: 256px;
         padding-top: 64px;
-        max-width: 1408px;
+        padding-bottom: 64px;
     }
 }
