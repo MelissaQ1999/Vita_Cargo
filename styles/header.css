@@ -23,11 +23,13 @@ header.act {
 
 /* The position and size of the logo */
 a.logo {
+    position: relative;
     display: flex;
     align-items: center;
     margin-left: 16px;
     width: fit-content;
     height: 60px;
+    z-index: 101;
 }
 
 a.logo img {

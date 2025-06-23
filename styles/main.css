@@ -47,17 +47,27 @@
 }
 
 html {
+    background-color: #FFF;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-width: 300px;
     min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
     scroll-behavior: smooth;
 }
 
 body { 
     background-color: #FFF;
+    font-family: 'Inter', sans-serif;
     width: 100%;
     z-index: -100;
     scroll-behavior: smooth;
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
 }
 
 /* For the space on the sides of the screen */
@@ -105,42 +115,38 @@ h1, h2, h3, h4, h5, h6{
     font-family: 'Inter', sans-serif;
     font-weight: bold;
     line-height: 1.2;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 2.25rem;
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 2rem;
 }
 
 h3 {
-    font-size: 28px;
+    font-size: 1.75rem;
 }
 
 h4 {
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 h5 {
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 h6 {
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 p,label {
     color: var(--spaceCadet);
     font-family: 'Inter', sans-serif;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 
@@ -148,56 +154,77 @@ p,label {
     The distances within the content components
 ---------------------------------------------------*/
 
-/* De ruimte tussen de menubalk en de paginatitel (H1) */
+/* The space between the menu bar and the page title (H1) */
 h1.pageTitle {
-    margin-top: 48px;
+    margin-top: 3rem;
 }
 
-/* De ruimte tussen de paginatitel (H1) en de intro paragraaf (p) */
+/* The space between the page title (H1) and the intro paragraph (p) */
 .pageIntro {
-    margin-top: 32px;
+    margin-top: 2rem;
 }
 
-/* Het eerste kopje (H2) binnen een pagina na de pagina intro paragraaf */
+/* The space between the first heading (H2) within a page after the page intro paragraph */
 .afterIntro {
-    margin-top: 40px;
+    margin-top: 2.5rem;
 }
 
-/* De afstand tussen de paginatitel (H1) en het eerste kopje (H2) van die pagina als er geen intro tekst tussen zit */
+/* The distance between the page title (H1) and the first heading (H2) of that page when there is no intro text in between */
 .beginningGap {
-    margin-top: 40px;
+    margin-top: 2.5rem;
 }
 
-/* De ruimte tussen een H2 kop en paragraaftekst (p) */
+/* The space between an H2 heading and paragraph text (p) */
 .H2textGap {
-    margin-top: 16px;
+    margin-top: 1rem;
 }
 
-/* De ruimte tussen een H3 kop en paragraaftekst (p) */
+/* The space between an H3 heading and paragraph text (p) */
 .H3textGap {
-    margin-top: 12px;
+    margin-top: 0.75rem;
 }
 
-/* De ruimte tussen bv. paragraafteksten binnen hetzelfde informatie stukje */
+/* The space between an H4 heading and paragraph text (p) */
+.H4textGap {
+    margin-top: 0.625rem;
+}
+
+/* The space between an H5 heading and paragraph text (p) */
+.H5textGap {
+    margin-top: 0.5rem;
+}
+
+/* The space between an H6 heading and paragraph text (p) */
+.H6textGap {
+    margin-top: 0.375rem;
+}
+
+/* The space between e.g. paragraph texts within the same piece of information */
 .insideInfoGap {
-    margin-top: 24px;
+    margin-top: 1.5rem;
 }
 
-/* De ruimte tussen stukjes content binnen hetzelfde onderwerp */
+/* The space between pieces of content within the same topic */
 .topicGap {
-    margin-top: 48px;
+    margin-top: 3rem;
 }
 
-/* De ruimte tussen stukjes content van verschillende onderwerpen */
+/* The space between pieces of content from different topics */
 .diffContentGap {
-    margin-top: 88px;
+    margin-top: 5.5rem;
 }
 
-/* In het geval van een achtergrondkeur (background-color) voor stukjes content over verschillende onderwerpen, dan worden de volgende classes toegepast om dit op te delen */
-/* Voeg dit toe aan het bovenste element waar de ruimte tussen moet komen*/
+/* In the case of a background color for pieces of content on different topics, the following classes are applied to divide this up */
+/* Add this to the top element where the space should go */
 .diffContentGapB {
-    margin-top: 44px;
-    padding-top: 44px;
+    margin-top: 2.75rem;
+    padding-top: 2.75rem;
+}
+
+/* For the space between the sides of the screen and the content within the element that has a background */
+.sectionBG {
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 
@@ -210,12 +237,13 @@ h1.pageTitle {
 button.primary {
     display: inline-block;
     position: relative;
-    height: 45px;
+    height: 2.75rem;
     width: auto;
+    max-width: 100%;
   
     font-family: 'Inter', sans-serif;
     font-weight: normal;
-    font-size: 17px;
+    font-size: 1rem;
     text-align: center;
     text-transform: uppercase;
     color: #fff;
@@ -235,7 +263,7 @@ button.primary {
     border: none;
     border-radius: 8px;
     padding: 4px 10px;
-    margin-top: 24px;
+    margin-top: 1.5rem;
     cursor: pointer;
 }
 
@@ -260,7 +288,7 @@ button.primary:before {
     transition-property: transform opacity;
 }
 
-/* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+/* Move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
 button.primary:hover:before {
     opacity: 1;
     transform: translateY(5px);
@@ -272,15 +300,16 @@ button.secondary {
     color: #000;
     font-family: 'Inter', sans-serif;
     font-weight: normal;
-    font-size: 17px;
+    font-size: 1rem;
     text-align: center;
     padding: 4px 10px;
-    margin-top: 24px;
+    margin-top: 1.5rem;
     border: 3px solid #808080;
     border-radius: 8px;
     cursor: pointer;
-    height: 45px;
-    width: 120px;
+    height: 2.75rem;
+    width: auto;
+    max-width: 100%;
 }
 
 /* This will change the button when you hover over it */
@@ -295,7 +324,7 @@ a {
     color: var(--spaceCadet);
     font-family: 'Inter', sans-serif;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 1.5;
 }
 
@@ -334,68 +363,86 @@ a:visited {
 
     /* Font */
     h1 {
-        font-size: 40px;
+        font-size: 2.5rem;
     }
     
     h2 {
-        font-size: 34px;
+        font-size: 2.125rem;
     }
     
     h3 {
-        font-size: 30px;
+        font-size: 1.875rem;
     }
     
     h4 {
-        font-size: 26px;
+        font-size: 1.625rem;
     }
 
     h6 {
-        font-size: 18px;
+        font-size: 1.125rem;
     }
     
     p, a, label {
-        font-size: 15px;
+        font-size: 0.938rem;
     }
     /*----------------------------------------*/
 
     /* The distances within the content components */
     h1.pageTitle, h1.pageTitleSub, .topicGap {
-        margin-top: 56px;
+        margin-top: 3.5rem;
     }
 
     .pageIntro {
-        margin-top: 36px;
+        margin-top: 2.25rem;
     }
 
     .afterIntro, .beginningGap {
-        margin-top: 46px;
+        margin-top: 2.875rem;
     }
 
     .H2textGap {
-        margin-top: 20px;
+        margin-top: 1.25rem;
     }
     
     .H3textGap {
-        margin-top: 14px;
+        margin-top: 0.875rem;
+    }
+
+    .H4textGap {
+        margin-top: 0.75rem;
+    }
+    
+    .H5textGap {
+        margin-top: 0.625rem;
+    }
+
+    .H6textGap {
+        margin-top: 0.5rem;
     }
     
     .insideInfoGap {
-        margin-top: 28px;
+        margin-top: 1.75rem;
     }
     
     .diffContentGap {
-        margin-top: 96px;
+        margin-top: 6rem;
     }
     
     .diffContentGapB {
-        margin-top: 48px;
-        padding-top: 48px;
+        margin-top: 3rem;
+        padding-top: 3rem;
+    }
+
+    .sectionBG {
+        padding-left: 22px;
+        padding-right: 22px;
     }
     /*----------------------------------------*/
 
     /* Button */
-    .bulletButton {
-        margin-top: 26px;
+    button.primary, button.secondary {
+        font-size: 1.063rem;
+        margin-top: 1.625rem;
     }
 }
 
@@ -415,75 +462,92 @@ a:visited {
 
     /* Font */
     h1 {
-        font-size: 46px;
+        font-size: 2.875rem;
     }
     
     h2 {
-        font-size: 38px;
+        font-size: 2.375rem;
     }
     
     h3 {
-        font-size: 32px;
+        font-size: 2rem;
     }
     
     h4 {
-        font-size: 28px;
+        font-size: 1.75rem;
     }
     
     h5 {
-        font-size: 22px;
+        font-size: 1.375rem;
     }
     
     h6 {
-        font-size: 20px;
+        font-size: 1.25rem;
     }
     
     p, a, label {
-        font-size: 16px;
+        font-size: 1rem;
     }
     /*----------------------------------------*/
 
     /* The distances within the content components */
     h1.pageTitle, h1.pageTitleSub, .topicGap {
-        margin-top: 66px;
+        margin-top: 4.125;
     }
 
     .pageIntro {
-        margin-top: 44px;
+        margin-top: 2.75rem;
     }
 
     .afterIntro, .beginningGap {
-        margin-top: 56px;
+        margin-top: 3.5rem;
     }
 
     .H2textGap {
-        margin-top: 24px;
+        margin-top: 1.5rem;
     }
     
     .H3textGap {
-        margin-top: 16px;
+        margin-top: 1rem;
+    }
+
+    .H4textGap {
+        margin-top: 0.875rem;
+    }
+    
+    .H5textGap {
+        margin-top: 0.75rem;
+    }
+
+    .H6textGap {
+        margin-top: 0.625rem;
     }
     
     .insideInfoGap {
-        margin-top: 34px;
+        margin-top: 2.125rem;
     }
     
     .diffContentGap {
-        margin-top: 106px;
+        margin-top: 6.625rem;
     }
     
     .diffContentGapB {
-        margin-top: 53px;
-        padding-top: 53px;
+        margin-top: 3.313rem;
+        padding-top: 3.313rem;
+    }
+
+    .sectionBG {
+        padding-left: 36px;
+        padding-right: 36px;
     }
     /*----------------------------------------*/
 
     /* Button */
     button.primary, button.secondary {
-        font-size: 19px;
+        font-size: 1.125rem;
         padding: 8px 20px;
-        margin-top: 35px;
-        height: 55px;
+        margin-top: 1.875rem;
+        height: 3.5rem;
     }
 }
 
@@ -502,72 +566,90 @@ a:visited {
 
     /* Font */
     h1 {
-        font-size: 54px;
+        font-size: 3.375rem;
     }
     
     h2 {
-        font-size: 44px;
+        font-size: 2.75rem;
     }
     
     h3 {
-        font-size: 36px;
+        font-size: 2.25rem;
     }
     
     h4 {
-        font-size: 30px;
+        font-size: 1.875rem;
     }
     
     h5 {
-        font-size: 24px;
+        font-size: 1.5rem;
     }
     
     p, a, label {
-        font-size: 17px;
+        font-size: 1.063rem;
     }
     /*----------------------------------------*/
 
     /* The distances within the content components */
     h1.pageTitle, .topicGap {
-        margin-top: 80px;
+        margin-top: 5rem;
     }
 
     h1.pageTitleSub {
-        margin-top: 140px; 
+        margin-top: 8.75rem; 
     }
 
     .pageIntro {
-        margin-top: 54px;
+        margin-top: 3.375rem;
     }
 
     .afterIntro, .beginningGap {
-        margin-top: 68px;
+        margin-top: 4.25rem;
     }
 
     .H2textGap {
-        margin-top: 30px;
+        margin-top: 1.875rem;
     }
     
     .H3textGap {
-        margin-top: 20px;
+        margin-top: 1.25rem;
+    }
+
+    .H4textGap {
+        margin-top: 1.125rem;
+    }
+    
+    .H5textGap {
+        margin-top: 1rem;
+    }
+
+    .H6textGap {
+        margin-top: 0.75rem;
     }
     
     .insideInfoGap {
-        margin-top: 40px;
+        margin-top: 2.5rem;
     }
     
     .diffContentGap {
-        margin-top: 120px;
+        margin-top: 7.5rem;
     }
     
     .diffContentGapB {
-        margin-top: 60px;
-        padding-top: 60px;
+        margin-top: 3.75rem;
+        padding-top: 3.75rem;
+    }
+
+    .sectionBG {
+        padding-left: 56px;
+        padding-right: 56px;
     }
     /*----------------------------------------*/
 
     /* Button */
-    .bulletButton {
-        margin-top: 34px;
+    button.primary, button.secondary {
+        font-size: 1.188;
+        margin-top: 2.125rem;
     }
 }
 
@@ -586,76 +668,94 @@ a:visited {
 
     /* Font */
     h1 {
-        font-size: 62px;
+        font-size: 3.875rem;
     }
     
     h2 {
-        font-size: 50px;
+        font-size: 3.125rem;
     }
     
     h3 {
-        font-size: 40px;
+        font-size: 2.5rem;
     }
     
     h4 {
-        font-size: 32px;
+        font-size: 2rem;
     }
     
     h5 {
-        font-size: 26px;
+        font-size: 1.625rem;
     }
     
     h6 {
-        font-size: 22px;
+        font-size: 1.375rem;
     }
     
     p, a, label {
-        font-size: 18px;
+        font-size: 1.125rem;
     }
     /*----------------------------------------*/
 
     /* The distances within the content components */
     h1.pageTitle, .topicGap {
-        margin-top: 94px;
+        margin-top: 5.875rem;
     }
 
     h1.pageTitleSub {
-        margin-top: 160px; 
+        margin-top: 10rem; 
     }
 
     .pageIntro {
-        margin-top: 64px;
+        margin-top: 4rem;
     }
 
     .afterIntro, .beginningGap {
-        margin-top: 80px;
+        margin-top: 5rem;
     }
 
     .H2textGap {
-        margin-top: 36px;
+        margin-top: 2.25rem;
     }
     
     .H3textGap {
-        margin-top: 24px;
+        margin-top: 1.5rem;
+    }
+
+    .H4textGap {
+        margin-top: 1.375rem;
+    }
+    
+    .H5textGap {
+        margin-top: 1.125rem;
+    }
+
+    .H6textGap {
+        margin-top: 0.875rem;
     }
     
     .insideInfoGap {
-        margin-top: 48px;
+        margin-top: 3rem;
     }
     
     .diffContentGap {
-        margin-top: 134px;
+        margin-top: 8.375rem;
     }
     
     .diffContentGapB {
-        margin-top: 67px;
-        padding-top: 67px;
+        margin-top: 4.188rem;
+        padding-top: 4.188rem;
+    }
+
+    .sectionBG {
+        padding-left: 120px;
+        padding-right: 120px;
     }
     /*----------------------------------------*/
 
     /* Button */
-    .bulletButton {
-        margin-top: 38px;
+    button.primary, button.secondary {
+        font-size: 1.25rem;
+        margin-top: 2.375rem;
     }
 }
 
@@ -674,68 +774,85 @@ a:visited {
 
     /* Font */
     h1 {
-        font-size: 72px;
+        font-size: 4.5rem;
     }
     
     h2 {
-        font-size: 58px;
+        font-size: 3.625rem;
     }
     
     h3 {
-        font-size: 46px;
+        font-size: 2.875rem;
     }
     
     h4 {
-        font-size: 36px;
+        font-size: 2.25rem;
     }
     
     h5 {
-        font-size: 28px;
+        font-size: 1.75rem;
     }
     /*----------------------------------------*/
 
     /* The distances within the content components */
     h1.pageTitle, .topicGap {
-        margin-top: 110px;
+        margin-top: 6.875rem;
     }
 
     h1.pageTitleSub {
-        margin-top: 182px; 
+        margin-top: 11.375rem; 
     }
 
     .pageIntro {
-        margin-top: 76px;
+        margin-top: 4.75rem;
     }
 
     .afterIntro, .beginningGap {
-        margin-top: 92px;
+        margin-top: 5.75rem;
     }
 
     .H2textGap {
-        margin-top: 42px;
+        margin-top: 2.625rem;
     }
     
     .H3textGap {
-        margin-top: 28px;
+        margin-top: 1.75rem;
+    }
+
+    .H4textGap {
+        margin-top: 1.625rem;
+    }
+    
+    .H5textGap {
+        margin-top: 1.375rem;
+    }
+
+    .H6textGap {
+        margin-top: 1rem;
     }
     
     .insideInfoGap {
-        margin-top: 56px;
+        margin-top: 3.5rem;
     }
     
     .diffContentGap {
-        margin-top: 150px;
+        margin-top: 9.375rem;
     }
     
     .diffContentGapB {
-        margin-top: 75px;
-        padding-top: 75px;
+        margin-top: 4.688rem;
+        padding-top: 4.688rem;
+    }
+
+    .sectionBG {
+        padding-left: 200px;
+        padding-right: 200px;
     }
     /*----------------------------------------*/
 
     /* Button */
-    .bulletButton {
-        margin-top: 44px;
+    button.primary, button.secondary {
+        margin-top: 2.75rem;
     }
 }
 
@@ -754,41 +871,58 @@ a:visited {
 
     /* The distances within the content components */
     h1.pageTitle, .topicGap {
-        margin-top: 128px;
+        margin-top: 8rem;
     }
 
     .pageIntro {
-        margin-top: 88px;
+        margin-top: 5.5rem;
     }
 
     .afterIntro, .beginningGap {
-        margin-top: 104px;
+        margin-top: 6.5rem;
     }
 
     .H2textGap {
-        margin-top: 48px;
+        margin-top: 3rem;
     }
     
     .H3textGap {
-        margin-top: 32px;
+        margin-top: 2rem;
+    }
+
+    .H4textGap {
+        margin-top: 1.875rem;
+    }
+    
+    .H5textGap {
+        margin-top: 1.5rem;
+    }
+
+    .H6textGap {
+        margin-top: 1.125rem;
     }
     
     .insideInfoGap {
-        margin-top: 64px;
+        margin-top: 4rem;
     }
     
     .diffContentGap {
-        margin-top: 168px;
+        margin-top: 10.5rem;
     }
     
     .diffContentGapB {
-        margin-top: 84px;
-        padding-top: 84px;
+        margin-top: 5.25rem;
+        padding-top: 5.25rem;
+    }
+
+    .sectionBG {
+        padding-left: 256px;
+        padding-right: 256px;
     }
     /*----------------------------------------*/
 
     /* Button */
-    .bulletButton {
-        margin-top: 48px;
+    button.primary, button.secondary {
+        margin-top: 3rem;
     }
 }
