@@ -17,7 +17,9 @@ main {
     CSS for the Hero Section
 ---------------------------------------------------*/
 .hero {
-    padding: 2rem 0;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 2rem;
 }
 
 .hero-content {
@@ -27,6 +29,7 @@ main {
     gap: 1.5rem;
     /* text-align: center; */
 }
+
 .hero-image {
     position: relative;
     width: 100%;
@@ -36,9 +39,9 @@ main {
 }
 
 .hero-image img {
+    position: absolute;
     width: 100%;
     height: 100%;
-    position: absolute;
     object-fit: cover;
     object-position: center center;
 }
@@ -48,6 +51,8 @@ main {
     CSS for the Services Section
 ---------------------------------------------------*/
 .services {
+    position: relative;
+    z-index: 10;
     margin: 2rem 0;
 }
 
@@ -62,7 +67,7 @@ main {
 .service-card1, .service-card2, .service-card3 {
     background: white;
     padding: 20px;
-    border-radius: 1rem;
+    border-radius: 16px;
     box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.15);
     text-align: center;
     flex-basis: 100%;
@@ -80,7 +85,7 @@ main {
 
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 12px;
+    margin-bottom: 0.75rem;
 }
 
 .plane { 
@@ -107,16 +112,16 @@ main {
 
 
 /*--------------------------------------------------
-    CSS for the Specialisatie Section
+    CSS for the Specialization Section
 ---------------------------------------------------*/
-.specialisatie {
-    margin-top: 44px;
+.specialization {
+    margin-top: 2.75rem;
     --child-width: 100vw;
     margin-left: calc(-.5 * var(--child-width) + 50%);
     width: var(--child-width);
 }
 
-.specialisatieWave {
+.specializationWave {
     background-image: url(../assets/waterBG.svg);
     background-repeat: no-repeat;
     background-position-x: center;
@@ -129,31 +134,53 @@ main {
     z-index: -10;
 }
 
-.specialisatie-grid {
-    background: linear-gradient(180deg, #1C59A5 50%, #FFF 100%);
+.specialization-grid {
+    background: linear-gradient(180deg, #1C59A5 40%, #78AAE8 85%, #FFF 98%);
     background-color: #1C59A5;
 
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
     top: -1.5rem;
+    padding-bottom: 3.5rem;
 }
 
-.specialisatie-image img {
+h2.web {
+    display: none;
+}
+
+.specialization-image {
+    position: relative;
     width: 100%;
-    max-width: 400px;
-    border-radius: 1rem;
+    max-width: 464px;
+    height: 240px;
+    overflow: hidden;
+    border-radius: 24px;
 }
 
-.specialisatie-text h2, .specialisatie-text p, .key-points ul li h6, .key-points ul li p {
+.specialization-image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+h2.app, .specialization-text h2, .specialization-text p, .key-points ul li h6, .key-points ul li p {
     color: #FFF;
     text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
 }
 
+/* This will override the default margin for this element on mobile and revert to the general style from 768px */
+@media (max-width: 767px) {
+    .specialization-text p {
+        margin-top: 0;
+    }
+}
+
 .key-points {
-    list-style-type: disc;
     padding-left: 10%;
     max-width: 500px;
     margin-left: auto;
@@ -172,43 +199,75 @@ main {
 
 /* Intermediate version of mobile and tablet (480px) */
 @media (min-width: 480px) {
-    
+    /* The Hero Section */
+    .hero-content {
+        gap: 1.75rem;
+    }
+
+    .hero-image {
+        height: 264px;
+    }
     /*----------------------------------------*/
+
+    /* The Services Section */
     .service-cards {
-        gap: 28px;
+        gap: 1.75rem;
     }
     
     .service-icon {
         width: 56px;
         height: 56px;
-        margin-bottom: 16px;
+        margin-bottom: 1rem;
     }
-    
     /*----------------------------------------*/
 
-    
-    /*----------------------------------------*/
+    /* The Specialization Section */
+    .specialization {
+        margin-top: 3rem;
+    }
 
-    
-}
+    .specializationWave {
+        height: 88px;
+    }
 
-/* Additional intermediate version of mobile and tablet (510px) */
-@media (min-width: 510px) {
-
+    .specialization-grid {
+        gap: 1.75rem;
+        padding-bottom: 4.25rem;
+    }
 }
 
 /* Tablet version (768px) */
 @media (min-width: 768px) {
+    /* The Hero Section */
     .hero-content {
         flex-direction: row;
-        text-align: left;
-        gap: 34px;
+        align-items: stretch;
+        gap: 2.125rem;
+    }
+
+    .hero-text {
+        flex: 1;
+        max-width: 50%;
+    }
+
+    .hero-image {
+        flex: 1;
+        max-width: 50%;
+        height: auto;
+        border-radius: 24px 0px 0px 0px;
+    }
+
+    .hero-image img {
+        position: relative;
+        display: block;
     }
     /*----------------------------------------*/
 
+    /* The Services Section */
     .service-cards {
         flex-direction: row;
         justify-content: center;
+        gap: 2.125rem;
     }
 
     .service-card1, .service-card2, .service-card3 {
@@ -222,20 +281,93 @@ main {
         background-size: 70%;
 
         margin-left: 0px;
-        margin-bottom: 20px;
+        margin-bottom: 1.25rem;
     }
     /*----------------------------------------*/
     
-    .specialisatie-grid {
+    /* The Specialization Section */
+    .specialization {
+        margin-top: 3.313rem;
+    }
+
+    .specializationWave {
+        height: 98px;
+    }
+
+    .specialization-grid {
         flex-direction: row;
-        text-align: left;
+        flex-wrap: wrap;
+        align-items: stretch;
+        gap: 2.125rem;
+        top: -1.25rem;
+        padding-bottom: 5.5rem;
+    }
+
+    h2.app {
+        display: none;
+    }
+
+    h2.web {
+        display: block;
+    }
+
+    .specialization-image {
+        flex: 1;
+        max-width: 50%;
+        height: auto;
+    }
+
+    .specialization-image img {
+        position: relative;
+        display: block;
+        object-position: center center;
+    }
+
+    .specialization-text {
+        flex: 1;
+        max-width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .key-points {
+        padding-left: 0;
+        max-width: 90%;
+        margin-top: 2rem;
+    }
+
+    .key-points ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.125rem;
+        align-items: center;
+    }
+
+    .key-points li {
+        margin-bottom: 0;
+    }
+
+    .key-points a {
+        display: block;
+        width: fit-content;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
 
 /* Laptop version (1024px) */
 @media (min-width: 1024px) {
+    /* The Hero Section */
+    .hero-content {
+        gap: 2.5rem;
+    }
+
+    /*----------------------------------------*/
+
+    /* The Services Section */
     .service-cards {
-        gap: 40px;
+        gap: 2.5rem;
     }
 
     .service-card1, .service-card2, .service-card3 {
@@ -246,80 +378,193 @@ main {
     .service-icon {
         width: 80px;
         height: 80px;
-        margin-bottom: 26px;
+        margin-bottom: 1.625rem;
     }
     /*----------------------------------------*/
 
-    .specialisatie-image img {
-        max-width: 500px;
+    /* The Specialization Section */
+    .specialization {
+        margin-top: 3.75rem;
+    }
+
+    .specializationWave {
+        height: 112px;
+    }
+
+    .specialization-grid {
+        gap: 2.5rem;
+        padding-bottom: 6.5rem;
+    }
+
+    .key-points ul {
+        gap: 2.5rem;
+    }
+}
+
+@media (min-width: 1190px) {
+    /* The Hero Section */
+    .hero-content {
+        padding-bottom: 3rem;
+    }
+    /*----------------------------------------*/
+
+    /* The Services Section */
+    .services {
+        margin-top: -9rem;
     }
 }
 
 /* Larger laptop version (1280px) */
 @media (min-width: 1280PX) {
-    
+    /* The Hero Section */
+    .hero-content {
+        gap: 3rem;
+        padding-bottom: 2rem;
+    }
     /*----------------------------------------*/
 
+    /* The Services Section */
+    .services {
+        margin-top: 0;
+    }
+
     .service-cards {
-        gap: 48px;
+        gap: 3rem;
     }
 
     .service-icon {
         width: 94px;
         height: 94px;
-        margin-bottom: 32px;
+        margin-bottom: 2rem;
     }
-    
     /*----------------------------------------*/
 
-    
+    /* The Specialization Section */
+    .specialization {
+        margin-top: 4.188rem;
+    }
+
+    .specializationWave {
+        height: 126px;
+    }
+
+    .specialization-grid {
+        gap: 3rem;
+        padding-bottom: 7.5rem;
+    }
+
+    .key-points ul {
+        gap: 3rem;
+    }
+}
+
+@media (min-width: 1390px) {
+    /* The Hero Section */
+    .hero-content {
+        padding-bottom: 4rem;
+    }
     /*----------------------------------------*/
 
-    
+    /* The Services Section */
+    .services {
+        margin-top: -9rem;
+    }
 }
 
 /* Intermediate version of laptop and desktop (1600px) */
 @media (min-width: 1600PX) {
-    
+    /* The Hero Section */
+    .hero-content {
+        gap: 3.5rem;
+        padding-bottom: 2rem;
+    }
     /*----------------------------------------*/
 
+    /* The Services Section */
+    .services {
+        margin-top: 0;
+    }
+
     .service-cards {
-        gap: 56px;
+        gap: 3.5rem;
     }
 
     .service-icon {
         width: 110px;
         height: 110px;
-        margin-bottom: 38px;
+        margin-bottom: 2.375rem;
     }
     
     /*----------------------------------------*/
 
-    
+    /* The Specialization Section */
+    .specialization {
+        margin-top: 4.688rem;
+    }
+
+    .specializationWave {
+        height: 142px;
+    }
+
+    .specialization-grid {
+        gap: 3.5rem;
+        padding-bottom: 8.5rem;
+    }
+
+    .key-points ul {
+        gap: 3.5rem;
+    }
+}
+
+@media (min-width: 1690px) {
+    /* The Hero Section */
+    .hero-content {
+        padding-bottom: 3rem;
+    }
     /*----------------------------------------*/
 
-   
+    /* The Services Section */
+    .services {
+        margin-top: -9rem;
+    }
 }
 
 /* Desktop version (1920px) */
 @media (min-width: 1920PX) {
-    
+    /* The Hero Section */
+    .hero-content {
+        gap: 4rem;
+    }
     /*----------------------------------------*/
 
+    /* The Services Section */
     .service-cards {
-        gap: 64px;
+        gap: 4rem;
     }
 
     .service-icon {
         width: 128px;
         height: 128px;
-        margin-bottom: 44px;
+        margin-bottom: 2.75rem;
     }
     
     /*----------------------------------------*/
 
-    
-    /*----------------------------------------*/
+    /* The Specialization Section */
+    .specialization {
+        margin-top: 5.25rem;
+    }
 
-    
+    .specializationWave {
+        height: 160px;
+    }
+
+    .specialization-grid {
+        gap: 4rem;
+        padding-bottom: 9rem;
+    }
+
+    .key-points ul {
+        gap: 4rem;
+    }
 }

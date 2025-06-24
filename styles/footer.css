@@ -6,28 +6,39 @@
 /*--------------------------------------------------
     Button to return to the top of the page
 ---------------------------------------------------*/
-div.topArrow {
-    grid-template-rows: repeat(1, 1fr);
-    transition: 1s ease-in-out;
-    margin-top: 56px;
-    margin-bottom: 16px;
+
+/* Container: hidden by default, bottom right */
+#backToTopContainer {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
 }
 
-a.topArrow {
+/* Show button once .visible is added */
+#backToTopContainer.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* The button itself (background with arrow) */
+#backToTop {
     display: block;
-    height: 40px; 
     width: 40px;
-    margin-left: auto;
-    margin-right: 16px;
-    overflow: hidden;
+    height: 40px;
+    background: var(--secondary) url('../assets/icons/Arrow.svg') no-repeat center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.48);
+    border-radius: 5%;
     text-indent: 100%;
     white-space: nowrap;
-    background: var(--secondary) url(../assets/icons/Arrow.svg) no-repeat center 50%;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.48);
+    overflow: hidden;
+    transition: transform 0.2s;
 }
 
-a.topArrow:hover {
-    background-position-y: 40%;
+#backToTop:hover {
+    transform: translateY(-4px);
     cursor: pointer;
 }
 

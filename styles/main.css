@@ -335,13 +335,13 @@ a:hover {
 }
 
 /* This will cause the link to change once you click on it */
-a:visited {
+/* a:visited {
     color: #1C5876;
 }
 
 .link.clicked {
     color: #1C5876;
-}
+} */
 
 
 /*--------------------------------------------------
