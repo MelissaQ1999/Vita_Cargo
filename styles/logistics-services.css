@@ -12,13 +12,51 @@
 /*--------------------------------------------------
     CSS for ...
 ---------------------------------------------------*/
+/* Hero */
+.services-hero {
+  padding: 2rem 0;
+  background: var(--mintCream);
+  text-align: center;
+}
 
+.services-hero h1 {
+  font-size: 1.75rem;
+  color: var(--spaceCadet);
+  margin-bottom: .5rem;
+}
 
 
 /*--------------------------------------------------
     CSS for ...
 ---------------------------------------------------*/
+/* Service cards */
+.services-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
 
+.service-detail {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.service-detail h2 {
+  margin-bottom: .5rem;
+  color: var(--spaceCadet);
+}
+
+.service-detail p { color: #333; }
+
+
+/*--------------------------------------------------
+    CSS for ...
+---------------------------------------------------*/
+/* CTA */
+.services-cta { text-align: center; margin-bottom: 3rem; }
 
 
 /*--------------------------------------------------
@@ -38,12 +76,20 @@
 /* Tablet version (768px) */
 @media screen and (min-width: 768px) {
 
+    .services-detail {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+    }
     /*----------------------------------------*/
 }
 
 /* Laptop version (1024px) */
 @media screen and (min-width: 1024px) {
 
+    .services-detail {
+        grid-template-columns: repeat(3,1fr);
+    }
     /*----------------------------------------*/
 }
 

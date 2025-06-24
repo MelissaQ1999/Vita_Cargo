@@ -12,13 +12,66 @@
 /*--------------------------------------------------
     CSS for ...
 ---------------------------------------------------*/
+.container { width:90%; max-width:1200px; margin:auto; }
 
+/* Hero */
+.page-hero { padding:2rem 0; background: var(--mintCream); text-align:center; }
+.page-hero h1 { font-size:1.75rem; color:var(--spaceCadet); margin-bottom:.5rem; }
+.page-hero p { color:#555; }
 
 
 /*--------------------------------------------------
     CSS for ...
 ---------------------------------------------------*/
+/* Contact info */
+.contact-info {
+  display:flex;
+  flex-direction:column;
+  gap:1.5rem;
+  margin:2rem 0;
+}
 
+.contact-box {
+  background:var(--secondary);
+  padding:1.5rem;
+  border-radius:1rem;
+  text-align:center;
+}
+
+.contact-box h2 { margin-bottom:.5rem; color:var(--primary); }
+.contact-box a, .contact-box p { color:#333; text-decoration:none; }
+
+
+/*--------------------------------------------------
+    CSS for ...
+---------------------------------------------------*/
+/* Form */
+.contact-form { margin:2rem 0; }
+.contact-form h2 { text-align:center; margin-bottom:1rem; color:var(--spaceCadet); }
+.contact-form form {
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+}
+
+.contact-form label { font-weight:600; color:#333; }
+.contact-form input, .contact-form textarea {
+  padding:.75rem;
+  border:1px solid #ccc;
+  border-radius:.5rem;
+}
+
+.contact-form .btn {
+  width:fit-content;
+  margin:1rem auto;
+}
+
+
+/*--------------------------------------------------
+    CSS for ...
+---------------------------------------------------*/
+/* Map */
+.map { margin:2rem 0 4rem; }
 
 
 /*--------------------------------------------------
@@ -37,7 +90,8 @@
 
 /* Tablet version (768px) */
 @media screen and (min-width: 768px) {
-
+    .contact-info { flex-direction:row; justify-content:space-between; }
+    .contact-box { flex:1; max-width:30%; }
     /*----------------------------------------*/
 }
 

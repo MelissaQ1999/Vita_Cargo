@@ -12,13 +12,99 @@
 /*--------------------------------------------------
     CSS for ...
 ---------------------------------------------------*/
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
 
+/* Hero */
+.page-hero {
+  padding: 2rem 0;
+  background: var(--mintCream);
+  text-align: center;
+}
+
+.page-hero h1 {
+  font-size: 1.75rem;
+  color: var(--spaceCadet);
+  margin-bottom: .5rem;
+}
+
+.page-hero p {
+  color: #555;
+  font-size: 1rem;
+}
 
 
 /*--------------------------------------------------
     CSS for ...
 ---------------------------------------------------*/
+.about-history {
+  margin-top: 2rem;
+}
 
+.about-history h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-history p {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline li {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: .75rem;
+  border-left: 3px solid var(--primary);
+}
+
+.timeline li strong {
+  color: var(--primary);
+}
+
+
+/*--------------------------------------------------
+    CSS for ...
+---------------------------------------------------*/
+.about-values {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.about-values h2 {
+  font-size: 1.5rem;
+  color: var(--spaceCadet);
+  margin-bottom: 1rem;
+}
+
+.about-values p {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.values-list {
+  list-style: none;
+  padding: 0;
+}
+
+.values-list li {
+  margin-bottom: .75rem;
+  text-align: left;
+  max-width: 600px;
+  margin: auto;
+}
+
+.values-list strong {
+  color: var(--primary);
+}
 
 
 /*--------------------------------------------------
@@ -38,6 +124,20 @@
 /* Tablet version (768px) */
 @media screen and (min-width: 768px) {
 
+    .page-hero {
+        text-align: left;
+        padding: 3rem 0;
+    }
+
+    .about-history .timeline, .values-list {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1.5rem;
+    }
+
+    .about-history, .about-values {
+        text-align: left;
+    }
     /*----------------------------------------*/
 }
 
