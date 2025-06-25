@@ -2,7 +2,7 @@
 <html lang="nl">
 
     <head>
-       <!-- General metadata
+        <!-- General metadata
         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -275,11 +275,24 @@
             <p class="copy">&copy; 2025 - VITA CARGO | <a class="avg" href="privacyverklaring.html">Privacy statement</a></p>
         </footer>
 
+        <!-- Hieronder begind de pop-up van de formulieren
+            –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <!-- De pop-up container -->
+        <div id="popup-overlay" style="display: block;"></div>
+        <div id="popup-container" style="display: block;">
+            <div id="popup">
+                <h2>Gelukt!</h2>
+                <p class="H2textGap">Uw formulier is succesvol verzonden. Wij zullen zo snel mogelijk contact met u opnemen.
+                </p>
+                <button class="primary" type="button" onclick="window.location.href = `${window.location.origin}/pages/contact.html`">Sluiten</button>
+            </div>
+        </div>
+
         <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
         <script>
             // AOS initialisatie
             AOS.init();
         </script>
+        
     </body>
-
 </html>

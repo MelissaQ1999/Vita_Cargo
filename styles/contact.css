@@ -9,96 +9,247 @@
 @import 'animaties.css';
 
 
-/*--------------------------------------------------
-    CSS for ...
----------------------------------------------------*/
-.container { width:90%; max-width:1200px; margin:auto; }
-
-/* Hero */
-.page-hero { padding:2rem 0; background: var(--mintCream); text-align:center; }
-.page-hero h1 { font-size:1.75rem; color:var(--spaceCadet); margin-bottom:.5rem; }
-.page-hero p { color:#555; }
-
+.contactHeader {
+    text-align: center;
+}
 
 /*--------------------------------------------------
-    CSS for ...
+    CSS for the Contact details
 ---------------------------------------------------*/
-/* Contact info */
-.contact-info {
-  display:flex;
-  flex-direction:column;
-  gap:1.5rem;
-  margin:2rem 0;
+.contactDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-.contact-box {
-  background:var(--secondary);
-  padding:1.5rem;
-  border-radius:1rem;
-  text-align:center;
+.contactItem a {
+    color: inherit;
+    text-decoration: none;
 }
 
-.contact-box h2 { margin-bottom:.5rem; color:var(--primary); }
-.contact-box a, .contact-box p { color:#333; text-decoration:none; }
+/* The Google Maps */
+.contactMap {
+    width: 100%;
+    height: 300px;
 
+    /* This makes Google Maps take up the full screen width */
+    --child-width: 100vw;
+    margin-left: calc(-.5 * var(--child-width) + 50%);
+    width: var(--child-width);
 
-/*--------------------------------------------------
-    CSS for ...
----------------------------------------------------*/
-/* Form */
-.contact-form { margin:2rem 0; }
-.contact-form h2 { text-align:center; margin-bottom:1rem; color:var(--spaceCadet); }
-.contact-form form {
-  display:flex;
-  flex-direction:column;
-  gap:1rem;
-}
-
-.contact-form label { font-weight:600; color:#333; }
-.contact-form input, .contact-form textarea {
-  padding:.75rem;
-  border:1px solid #ccc;
-  border-radius:.5rem;
-}
-
-.contact-form .btn {
-  width:fit-content;
-  margin:1rem auto;
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.48), inset 0px -2px 16px 0px rgba(0,0,0,0.48);
+    -webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.48), inset 0px -2px 16px 0px rgba(0,0,0,0.48);
+    -moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.48), inset 0px -2px 16px 0px rgba(0,0,0,0.48);
 }
 
 
 /*--------------------------------------------------
-    CSS for ...
+    CSS for the Form
 ---------------------------------------------------*/
-/* Map */
-.map { margin:2rem 0 4rem; }
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Form styling */
+.formContainer {
+    background-color: #D8E7F8;
+    --child-width: 100vw;
+    margin-left: calc(-.5 * var(--child-width) + 50%);
+    width: var(--child-width);
+}
+
+form {
+    max-width: 25rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 1.5rem;
+    padding-bottom: 3.5rem;
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 0px;
+    width: auto;
+}
+
+label {
+    display: block;
+    margin-top: 1.125rem;
+    margin-bottom: 0.25rem;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="tel"] {
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    height: 2.5rem;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+input#telefoonnummer {
+    width: 60%;
+}
+
+textarea {
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    height: auto;
+    padding: 8px;
+    border: none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+}
+
+input:hover, textarea:hover {
+    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+input:focus-visible, textarea:focus-visible {
+    outline: var(--primary) auto 1px;
+}
+
+input.error-border, textarea.error-border {
+    border-bottom: 2.5px solid var(--warning);
+}
+
+input.valid-border, textarea.valid-border {
+    border-bottom: 2.5px solid var(--sucsess);
+}
+
+.error {
+    color: var(--warning);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.625rem;
+    margin-top: 0.25rem;
+}
+
+
+/*--------------------------------------------------
+    CSS voor de pop-up melding
+---------------------------------------------------*/
+
+/* Voor de zwarte achtergrond */
+#popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+/* De box waar de pop-up melding instaat */
+#popup-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 60%;
+    background-color: #fff;
+    padding: 24px 16px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+#popup {
+    text-align: center;
+}
+
+/* The Pop-up button */
+.PopUpBulletButton {
+    margin-top: 24px;
+}
+
+.PopUpBulletButton:hover {
+    cursor: pointer;
+}
 
 
 /*--------------------------------------------------
     The breakpoints
 ---------------------------------------------------*/
 
-/* Intermediate version of mobile and tablet (450px) */
-@media screen and (min-width: 450px) {
-    
-}
+/* Intermediate version of mobile and tablet (480px) */
+@media screen and (min-width: 480px) {
+    /* Alles wat hoort bij het contactformulier */
+    form {
+        padding-top: 1.75rem;
+        padding-bottom: 4.25rem;
+    }
 
-/* Additional intermediate version of mobile and tablet (510px) */
-@media (min-width: 510px) {
+    label {
+        margin-top: 1.25rem;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="email"],
+    input[type="tel"] {
+        height: 2.75rem;
+    }
+    /*----------------------------------------*/
+
+    /* Alles wat hooort bij de Pop-up */
+
+    #popup-container {
+        min-width: 55%;
+        padding: 32px 20px;
+    }
+
+    /* Pop-up Button */
+    .PopUpBulletButton {
+        margin-top: 26px;
+    }
     
 }
 
 /* Tablet version (768px) */
 @media screen and (min-width: 768px) {
-    .contact-info { flex-direction:row; justify-content:space-between; }
-    .contact-box { flex:1; max-width:30%; }
+    .contact-details {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .contact-item {
+        flex: 1;
+        max-width: 32%;
+    }
+    
     /*----------------------------------------*/
+
+
 }
 
 /* Laptop version (1024px) */
 @media screen and (min-width: 1024px) {
 
     /*----------------------------------------*/
+
+    .contact-form {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .contact-intro,
+    .contact-form form {
+        flex: 1;
+    }
 }
 
 /* Larger laptop version (1280px) */
