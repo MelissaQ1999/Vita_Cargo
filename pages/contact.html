@@ -54,6 +54,7 @@
         <script src="https://kit.fontawesome.com/60bf54ff8c.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <script src="../scripts/main.js" defer></script>
+        <script src="../scripts/contact.js" defer></script>
 
         <!-- JSON-LD structured data -->
         <script type="application/ld+json">
@@ -187,27 +188,29 @@
                 </div>
 
                 <div class="formContainer">
-                    <form form id="algemeenForm" action="../scripts/algemeen-form-handler.php" method="post" autocomplete="on" novalidate>
+                    <form id="generalForm" action="../scripts/form-handler.php" method="post" autocomplete="on" novalidate>
                         <fieldset>
-                            <label for="naam">Naam*</label>
-                            <input type="text" id="naam" name="naam" placeholder="Uw naam" required>
-                            <div class="error" id="naamError"></div>    
+                            <input type="hidden" name="lang" value="nl">
+                            <label for="name">Naam*</label>
+                            <input type="text" id="name" name="name" placeholder="Uw naam" required>
+                            <div class="error" id="nameError"></div>    
                                 
-                            <label for="algemeen-email">E-mailadres*</label>
-                            <input type="email" id="algemeen-email" name="algemeen-email" placeholder="voorbeeld@domein.com" required>
-                            <div class="error" id="algemeen-emailError"></div>
+                            <label for="email">E-mailadres*</label>
+                            <input type="email" id="email" name="email" placeholder="voorbeeld@domein.com" required>
+                            <div class="error" id="emailError"></div>
 
-                            <label for="telefoonnummer">Telefoonnummer</label>
-                            <input type="tel" id="telefoonnummer" name="telefoonnummer" placeholder="0612345678">
+                            <label for="phoneNumber">Telefoonnummer</label>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="0612345678" pattern="^\+?[0-9\s\-]{7,15}$">
+                            <div class="error" id="phoneNumberError"></div>
 
-                            <label for="onderwerp">Onderwerp</label>
-                            <input type="text" id="onderwerp" name="onderwerp" placeholder="Het onderwerp"> 
+                            <label for="subject">Onderwerp</label>
+                            <input type="text" id="subject" name="subject" placeholder="Het onderwerp"> 
                         </fieldset>
 
                         <fieldset>
-                            <label for="bericht">Bericht*</label>
-                            <textarea id="bericht" name="bericht" rows="5" placeholder="Uw bericht..." required></textarea>
-                            <div class="error" id="berichtError"></div>
+                            <label for="message">Bericht*</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Uw bericht..." required></textarea>
+                            <div class="error" id="messageError"></div>
                         </fieldset>
 
                         <button type="submit" class="primary">Verzenden</button>
@@ -240,7 +243,7 @@
                 <nav class="footerMenu">
                     <ul class="footNav">
                         <li class="first">
-                            <a href="index.html">Home</a>
+                            <a href="../index.html">Home</a>
                         </li>
                         <li>
                             <a href="logistieke-diensten.html">Logistieke Diensten</a>

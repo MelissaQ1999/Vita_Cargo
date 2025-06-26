@@ -54,13 +54,14 @@
         <script src="https://kit.fontawesome.com/60bf54ff8c.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <script src="../scripts/main.js" defer></script>
+        <script src="../scripts/contact.js" defer></script>
 
         <!-- JSON-LD structured data -->
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org",
                 "@type": "ContactPage",
-                "url": "https://www.vitacargo.com/pages/contact.html",
+                "url": "https://www.vitacargo.com/pages/contact_succes.html",
                 "mainEntity": {
                     "@type": "Organization",
                     "name": "Vita Cargo B.V.",
@@ -147,37 +148,6 @@
         <!-- Below begins the main content of the contact page
         ––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->     
         <main>
-            <!-- Page title -->
-            <section class="contactHeader">
-                <h1 class="pageTitle">Contact</h1>
-            </section>
-
-            <!-- Contact details -->
-            <section class="contactDetails beginningGap">
-                <div class="contactItem">
-                    <h6>Ons adres</h6>
-                    <address>
-                        J.P. Gouverneurlaan 40<br>
-                        2171 ER Sassenheim<br>
-                        Zuid-Holland, Nederland
-                    </address>
-                </div>
-                <div class="contactItem">
-                    <h6>Telefoon</h6>
-                    <p><a href="tel:+31642818283">+31 6 428 182 83</a></p>
-                </div>
-                <div class="contactItem">
-                    <h6>E-mail</h6>
-                    <p><a href="mailto:info@vitacargo.com">info@vitacargo.com</a></p>
-                </div>
-
-                <!-- Google Maps -->
-                <iframe class="contactMap"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54536.852132352404!2d4.483247367613776!3d52.23546220333655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5c17c5682a9f3%3A0xa75c7f790812bad8!2sJ.P.%20Gouverneurlaan%2040%2C%202171%20ER%20Sassenheim!5e0!3m2!1snl!2snl!4v1750847413268!5m2!1snl!2snl"
-                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </section>
-
             <!-- Form -->
             <section class="contactForm diffContentGap">
                 <!-- Intro text for the form -->
@@ -187,27 +157,29 @@
                 </div>
 
                 <div class="formContainer">
-                    <form form id="algemeenForm" action="../scripts/algemeen-form-handler.php" method="post" autocomplete="on" novalidate>
+                    <form id="generalForm" action="../scripts/form-handler.php" method="post" autocomplete="on" novalidate>
                         <fieldset>
-                            <label for="naam">Naam*</label>
-                            <input type="text" id="naam" name="naam" placeholder="Uw naam" required>
-                            <div class="error" id="naamError"></div>    
+                            <input type="hidden" name="lang" value="nl">
+                            <label for="name">Naam*</label>
+                            <input type="text" id="name" name="name" placeholder="Uw naam" required>
+                            <div class="error" id="nameError"></div>    
                                 
-                            <label for="algemeen-email">E-mailadres*</label>
-                            <input type="email" id="algemeen-email" name="algemeen-email" placeholder="voorbeeld@domein.com" required>
-                            <div class="error" id="algemeen-emailError"></div>
+                            <label for="email">E-mailadres*</label>
+                            <input type="email" id="email" name="email" placeholder="voorbeeld@domein.com" required>
+                            <div class="error" id="emailError"></div>
 
-                            <label for="telefoonnummer">Telefoonnummer</label>
-                            <input type="tel" id="telefoonnummer" name="telefoonnummer" placeholder="0612345678">
+                            <label for="phoneNumber">Telefoonnummer</label>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="0612345678" pattern="^\+?[0-9\s\-]{7,15}$">
+                            <div class="error" id="phoneNumberError"></div>
 
-                            <label for="onderwerp">Onderwerp</label>
-                            <input type="text" id="onderwerp" name="onderwerp" placeholder="Het onderwerp"> 
+                            <label for="subject">Onderwerp</label>
+                            <input type="text" id="subject" name="subject" placeholder="Het onderwerp"> 
                         </fieldset>
 
                         <fieldset>
-                            <label for="bericht">Bericht*</label>
-                            <textarea id="bericht" name="bericht" rows="5" placeholder="Uw bericht..." required></textarea>
-                            <div class="error" id="berichtError"></div>
+                            <label for="message">Bericht*</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Uw bericht..." required></textarea>
+                            <div class="error" id="messageError"></div>
                         </fieldset>
 
                         <button type="submit" class="primary">Verzenden</button>
@@ -240,7 +212,7 @@
                 <nav class="footerMenu">
                     <ul class="footNav">
                         <li class="first">
-                            <a href="index.html">Home</a>
+                            <a href="../index.html">Home</a>
                         </li>
                         <li>
                             <a href="logistieke-diensten.html">Logistieke Diensten</a>
@@ -284,7 +256,7 @@
                 <h2>Gelukt!</h2>
                 <p class="H2textGap">Uw formulier is succesvol verzonden. Wij zullen zo snel mogelijk contact met u opnemen.
                 </p>
-                <button class="primary" type="button" onclick="window.location.href = `${window.location.origin}/pages/contact.html`">Sluiten</button>
+                <button id="close-popup" class="primary" type="button" onclick="window.location.href = `${window.location.origin}/pages/contact.html`">Sluiten</button>
             </div>
         </div>
 
@@ -293,6 +265,6 @@
             // AOS initialisatie
             AOS.init();
         </script>
-        
+
     </body>
 </html>
