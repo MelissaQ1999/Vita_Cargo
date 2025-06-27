@@ -84,6 +84,10 @@ footer {
     margin-bottom: 0px;
 }
 
+.footNav li a {
+    color: var(--spaceCadet);
+}
+
 /* The layout of the contact details */
 .footContact div {
     display: flex;
@@ -108,6 +112,10 @@ footer {
     height: 22px;
     width: auto;
     margin-right: 20px;
+}
+
+.footContact div div a {
+    color: var(--spaceCadet);
 }
 
 /* The format of the copywrite line */

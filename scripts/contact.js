@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 id: 'name',
                 errorId: 'nameError',
                 validate: value => value.trim() !== '',
-                errorMessage: L.naam
+                errorMessage: L.name
             },
             {
                 id: 'email',
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 id: 'message',
                 errorId: 'messageError',
                 validate: value => value.trim() !== '',
-                errorMessage: L.bericht
+                errorMessage: L.message
             }
         ];
     
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (tel.value.trim() !== '') {
             const telOK = /^\+?[0-9\s\-]{7,15}$/.test(tel.value);
             if (!telOK) {
-                telErr.textContent = L.telefoonnummer;
+                telErr.textContent = L.phoneNumber;
                 tel.classList.add('error-border');
                 tel.classList.remove('valid-border');
                 isValid = false;

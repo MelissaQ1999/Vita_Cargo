@@ -237,7 +237,7 @@ h1.pageTitle {
 button.primary {
     display: inline-block;
     position: relative;
-    height: 2.75rem;
+    height: 2.5rem;
     width: auto;
     max-width: 100%;
   
@@ -307,7 +307,7 @@ button.secondary {
     border: 3px solid #808080;
     border-radius: 8px;
     cursor: pointer;
-    height: 2.75rem;
+    height: 2.5rem;
     width: auto;
     max-width: 100%;
 }
@@ -321,7 +321,7 @@ button.secondary:hover {
 
 /* Here you can edit a link */
 a {
-    color: var(--spaceCadet);
+    color: var(--primary);
     font-family: 'Inter', sans-serif;
     font-weight: normal;
     font-size: 0.875rem;
@@ -382,7 +382,7 @@ a:hover {
         font-size: 1.125rem;
     }
     
-    p, a, label, address {
+    p, a, address {
         font-size: 0.938rem;
     }
     /*----------------------------------------*/
@@ -485,7 +485,7 @@ a:hover {
         font-size: 1.25rem;
     }
     
-    p, a, label, address {
+    p, a, address {
         font-size: 1rem;
     }
     /*----------------------------------------*/
@@ -547,7 +547,7 @@ a:hover {
         font-size: 1.125rem;
         padding: 8px 20px;
         margin-top: 1.875rem;
-        height: 3.5rem;
+        height: 2.75rem;
     }
 }
 
@@ -585,7 +585,7 @@ a:hover {
         font-size: 1.5rem;
     }
     
-    p, a, label, address {
+    p, a, address {
         font-size: 1.063rem;
     }
     /*----------------------------------------*/
@@ -691,7 +691,7 @@ a:hover {
         font-size: 1.375rem;
     }
     
-    p, a, label, address {
+    p, a, address {
         font-size: 1.125rem;
     }
     /*----------------------------------------*/
@@ -756,6 +756,7 @@ a:hover {
     button.primary, button.secondary {
         font-size: 1.25rem;
         margin-top: 2.375rem;
+        height: 3rem;
     }
 }
 
@@ -853,6 +854,7 @@ a:hover {
     /* Button */
     button.primary, button.secondary {
         margin-top: 2.75rem;
+        height: 3.25rem;
     }
 }
 

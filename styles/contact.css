@@ -16,7 +16,7 @@
 /*--------------------------------------------------
     CSS for the Contact details
 ---------------------------------------------------*/
-.contactDetails {
+.contactItems {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -24,11 +24,6 @@
 
 .contactItem address {
     font-style: normal;
-}
-
-.contactItem a {
-    color: inherit;
-    text-decoration: none;
 }
 
 /* The Google Maps */
@@ -53,7 +48,14 @@
 .contactForm {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
+}
+
+.contactIntro {
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 /* Form styling */
@@ -82,7 +84,7 @@ fieldset {
 
 label {
     display: block;
-    margin-top: 1.125rem;
+    margin-top: 1rem;
     margin-bottom: 0.25rem;
 }
 
@@ -99,7 +101,7 @@ input[type="tel"] {
     box-sizing: border-box;
 }
 
-input#telefoonnummer {
+input#phoneNumber {
     width: 60%;
 }
 
@@ -140,10 +142,10 @@ input.valid-border, textarea.valid-border {
 
 
 /*--------------------------------------------------
-    CSS voor de pop-up melding
+    CSS for the pop-up notification
 ---------------------------------------------------*/
 
-/* Voor de zwarte achtergrond */
+/* For the black background */
 #popup-overlay {
     position: fixed;
     top: 0;
@@ -151,10 +153,10 @@ input.valid-border, textarea.valid-border {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    display: none;
+    /* display: none; */
 }
 
-/* De box waar de pop-up melding instaat */
+/* The box where the pop-up message is located */
 #popup-container {
     position: fixed;
     top: 50%;
@@ -167,7 +169,7 @@ input.valid-border, textarea.valid-border {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.5);
-    display: none;
+    /* display: none; */
 }
 
 #popup {
@@ -178,17 +180,222 @@ input.valid-border, textarea.valid-border {
 /*--------------------------------------------------
     The breakpoints
 ---------------------------------------------------*/
+@media (min-width: 345px) {
+    /* The Contact details */
+    .contactItems {
+        display: grid;
+        grid-template-rows: auto auto;
+        row-gap: 1.5rem;
+        column-gap: 0;
+    }
+
+    /* 1st item (title) takes up the first column and all the rows in row 1 */
+    .contactItems > .contactItem:nth-child(1) {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+    }
+
+    /* 2nd item (address) takes up two rows in column 1 */
+    .contactItems > .contactItem:nth-child(2) {
+        grid-column: 1;
+        grid-row: 2 / span 3;
+    }
+
+    /* 3rd item (telephone) in column 2, row 2 */
+    .contactItems > .contactItem:nth-child(3) {
+        grid-column: 2;
+        grid-row: 2;
+        padding-left: 1.5rem;
+    }
+
+    /* 4th item (email) in column 2, row 3 */
+    .contactItems > .contactItem:nth-child(4) {
+        grid-column: 2;
+        grid-row: 3;
+        padding-left: 1.5rem;
+    }
+}
 
 /* Intermediate version of mobile and tablet (480px) */
 @media screen and (min-width: 480px) {
-    /* Alles wat hoort bij het contactformulier */
+    /* The Contact details */
+    .contactItems {
+        gap: 1.75rem;
+    }
+
+    .contactItems > .contactItem:nth-child(3) {
+        padding-left: 0;
+    }
+
+    .contactItems > .contactItem:nth-child(4) {
+        padding-left: 0;
+    }
+    /*----------------------------------------*/
+
+    /* Everything that belongs to the contact form */
+    .contactForm {
+        gap: 1.75rem;
+    }
+
     form {
         padding-top: 1.75rem;
         padding-bottom: 4.25rem;
     }
+    /*----------------------------------------*/
 
-    label {
-        margin-top: 1.25rem;
+    /* Everything that belongs to the Pop-up */
+
+    #popup-container {
+        min-width: 55%;
+        padding: 32px 20px;
+    }
+}
+
+/* Additional intermediate version of mobile and tablet (592px) */
+@media (min-width: 592px) {
+    /* The Contact details */
+    .contactItems {
+        align-items: start;
+    }
+
+    .contactItems > .contactItem:nth-child(1) {
+        grid-column: 1 / span 3;
+        grid-row: 1;
+    }
+
+    .contactItems > .contactItem:nth-child(2) {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .contactItems > .contactItem:nth-child(3) {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .contactItems > .contactItem:nth-child(4) {
+        grid-column: 3;
+        grid-row: 2;
+    }
+}
+
+/* Tablet version (768px) */
+@media screen and (min-width: 768px) {
+    /* The Contact details */
+    .contactDetails {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2.125rem;
+    }
+
+    .contactMap {
+        margin-top: 0;
+        grid-row: 1;
+        grid-column: 1;
+
+        height: 100%;
+        width: 100%;
+        --child-width: 100%;
+        margin-left: 0;
+        box-shadow: none;
+    }
+
+    .contactItems {
+        display: flex;
+        flex-direction: column;
+        grid-row: 1;
+        grid-column: 2;
+
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    /*----------------------------------------*/
+
+    /* Everything that belongs to the contact form */
+    .contactForm {
+        flex-direction: row;
+        align-items: center;
+        gap: 2.125rem;
+        margin-bottom: 3.5rem;
+    }
+
+    .contactIntro {
+        max-width: 100%;
+        text-align: left;
+        flex-basis: 50%;
+    }
+
+    .formContainer {
+        flex-basis: 50%;
+        height: 100%;
+        width: 100%;
+        --child-width: 100%;
+        margin-left: 0;
+    }
+
+    form {
+        padding-top: 0.875rem;
+        padding-bottom: 2rem;
+    }
+    /*----------------------------------------*/
+
+    /* Everything that belongs to the Pop-up */
+    #popup-container {
+        min-width: 50%;
+        padding: 40px 24px;
+    }
+}
+
+/* Laptop version (1024px) */
+@media screen and (min-width: 1024px) {
+    /* The Contact details */
+    .contactDetails {
+        gap: 2.5rem;
+    }
+    /*----------------------------------------*/
+
+    /* Everything that belongs to the contact form */
+    .contactForm {
+        gap: 2.5rem;
+        margin-bottom: 4.5rem;
+    }
+}
+
+/* Larger laptop version (1280px) */
+@media screen and (min-width: 1280PX) {
+    /* The Contact details */
+    .contactDetails {
+        gap: 3rem;
+    }
+    /*----------------------------------------*/
+
+    /* Everything that belongs to the contact form */
+    .contactForm {
+        gap: 3rem;
+        margin-bottom: 5.5rem;
+    }
+}
+
+/* Intermediate version of laptop and desktop (1680px) */
+@media screen and (min-width: 1680PX) {
+    /* The Contact details */
+    .contactDetails {
+        gap: 3.5rem;
+
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /*----------------------------------------*/
+
+    /* Everything that belongs to the contact form */
+    .contactForm {
+        gap: 3.5rem;
+        margin-bottom: 6.5rem;
+
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     input[type="text"],
@@ -197,70 +404,27 @@ input.valid-border, textarea.valid-border {
     input[type="tel"] {
         height: 2.75rem;
     }
-    /*----------------------------------------*/
-
-    /* Alles wat hooort bij de Pop-up */
-
-    #popup-container {
-        min-width: 55%;
-        padding: 32px 20px;
-    }
-
-    /* Pop-up Button */
-    .PopUpBulletButton {
-        margin-top: 26px;
-    }
-    
-}
-
-/* Tablet version (768px) */
-@media screen and (min-width: 768px) {
-    .contact-details {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .contact-item {
-        flex: 1;
-        max-width: 32%;
-    }
-    
-    /*----------------------------------------*/
-
-
-}
-
-/* Laptop version (1024px) */
-@media screen and (min-width: 1024px) {
-
-    /*----------------------------------------*/
-
-    .contact-form {
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 2rem;
-    }
-
-    .contact-intro,
-    .contact-form form {
-        flex: 1;
-    }
-}
-
-/* Larger laptop version (1280px) */
-@media screen and (min-width: 1280PX) {
-
-    /*----------------------------------------*/
-}
-
-/* Intermediate version of laptop and desktop (1680px) */
-@media screen and (min-width: 1680PX) {
-
-    /*----------------------------------------*/
 }
 
 /* Desktop version (1920px) */
 @media screen and (min-width: 1920PX) {
-    
+    /* The Contact details */
+    .contactDetails {
+        gap: 4rem;
+
+        max-width: 1408px;
+        margin-left: auto;
+        margin-right: auto;
+    }
     /*----------------------------------------*/
+
+    /* Everything that belongs to the contact form */
+    .contactForm {
+        gap: 4rem;
+        margin-bottom: 7.5rem;
+
+        max-width: 1408px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
