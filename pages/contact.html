@@ -17,7 +17,7 @@
         <meta name="category" content="Logistiek, Transport, Cold Chain">
         <meta name="copyright" content="© Vita Cargo B.V.">
         <meta name="publisher" content="Vita Cargo B.V.">
-        <meta name="author" content="Vita Cargo B.V., in samenwerking met Mad Party Games en Melissa van Dijk">
+        <meta name="author" content="Melissa van Dijk, in samenwerking met Mad Party Games en Vita Cargo B.V.">
         <meta name="designer" content="Melissa van Dijk">
 
         <!-- Link tags
@@ -33,7 +33,7 @@
         <meta property="og:type" content="website">
         <meta property="og:title" content="Contact - Kom in contact met Vita Cargo">
         <meta property="og:site_name" content="Vita Cargo">
-        <meta property="og:description" content="Bel ons op +31 6 428 182 83, mail naar info@vitacargo.com of vul het formulier in. Uw vracht, onze missie - Vita Cargo B.V.">
+        <meta property="og:description" content="Bel ons op +31 6 428 182 83, mail naar info@vitacargo.com of vul het formulier in. Uw vracht. Onze missie! - Vita Cargo B.V.">
         <meta property="og:image" content="../assets/images/Cargo_Ship_at_Sunset.jpg">
         <meta property="og:image:type" content="image/jpg">
         <meta property="og:url" content="https://www.vitacargo.com/pages/contact.html">
@@ -42,7 +42,7 @@
         –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="Contact - Kom in contact met Vita Cargo">
-        <meta name="twitter:description" content="Bel ons op +31 6 428 182 83, mail naar info@vitacargo.com of vul het formulier in. Uw vracht, onze missie - Vita Cargo B.V.">
+        <meta name="twitter:description" content="Bel ons op +31 6 428 182 83, mail naar info@vitacargo.com of vul het formulier in. Uw vracht. Onze missie! - Vita Cargo B.V.">
         <meta name="twitter:image" content="../assets/images/Cargo_Ship_at_Sunset.jpg">
 
         <!-- CSS en JavaScript files
@@ -62,14 +62,19 @@
                 "@context": "https://schema.org",
                 "@type": "ContactPage",
                 "url": "https://www.vitacargo.com/pages/contact.html",
+                "name": "Contact - Kom in contact met Vita Cargo",
+                "description": "Neem vrijblijvend contact op met Vita Cargo B.V. Bel ons op +31 6 428 182 83, mail naar info@vitacargo.com of vul het formulier in voor snelle service.",
+                "inLanguage": "nl-NL",
                 "mainEntity": {
                     "@type": "Organization",
                     "name": "Vita Cargo B.V.",
                     "description": "Internationale logistiek & cold chain specialist. Gekoeld transport voor bloembollen, AGF, farmaceutica en meer.",
                     "url": "https://www.vitacargo.com",
-                    "logo": "https://www.vitacargo.com/assets/logo/logo-vita_cargo.png",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://www.vitacargo.com/assets/logo/logo-vita_cargo.png"
+                    },
                     "address": {
-                        "@type": "PostalAddress",
                         "@type": "PostalAddress",
                         "streetAddress": "J.P. Gouverneurlaan 40",
                         "addressLocality": "Sassenheim",
@@ -92,7 +97,7 @@
         </script>
     </head>
 
-    <!-- This is the HTML for the home page
+    <!-- This is the HTML for the contact page
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <body>
         <!-- Below the site loader is called -->
@@ -154,7 +159,7 @@
             </section>
 
             <!-- Contact details -->
-            <section class="contactDetails beginningGap">
+            <section class="contactDetails beginningGap container">
                 <div class="contactItems">
                     <h3 class="contactItem">Contactinformatie</h3>
                     <div class="contactItem">
@@ -183,7 +188,7 @@
             </section>
 
             <!-- Form -->
-            <section class="contactForm topicGap">
+            <section class="contactForm topicGap container">
                 <!-- Intro text for the form -->
                 <div class="contactIntro">
                     <h2>Neem gerust vrijblijvend contact met ons op</h2>

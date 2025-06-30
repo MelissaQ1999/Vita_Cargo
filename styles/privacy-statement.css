@@ -1,0 +1,175 @@
+/*---------------------------------------------------------------------------------
+    In this CSS file you will find the style for the Privacy Statement
+----------------------------------------------------------------------------------*/
+
+/* Here you can import all stylesheets */
+@import 'main.css';
+@import 'header.css';
+@import 'footer.css';
+
+* {
+    list-style: auto;
+}
+
+main h1 {
+    word-break: break-word;
+}
+
+article {
+    max-width: 650px;
+    margin-bottom: 3.5rem;
+}
+
+section.pageIntro {
+    margin-left: 32px;
+}
+
+ol li {
+    list-style-type: decimal;
+    list-style-position: outside;
+    color: var(--spaceCadet);
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 1.75rem;
+    line-height: 1.2;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+ol li ol > li {
+    list-style-type: decimal;
+    list-style-position: outside;
+    color: var(--spaceCadet);
+    font-family: 'Inter', sans-serif;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+ol li ol > li::marker { content: counters(list-item, ".") " "; }
+
+/* The layout of the table */
+table.abc {
+    position: relative;
+    width: 100%;
+}
+
+table, td {
+    border: none;
+    border-collapse: collapse;
+}
+  
+td {
+    text-align: left;
+    vertical-align: top;
+}
+
+tr > td:nth-child(odd) {
+    padding-right: 4px;
+}
+
+
+/*--------------------------------------------------
+    The breaking points
+---------------------------------------------------*/
+/* Intermediate version of mobile and tablet (480px) */
+@media (min-width: 480px) {
+    article {
+        margin-bottom: 4.25rem;
+    }
+
+    ol li {
+        font-size: 1.875rem;
+    }
+
+    ol li ol > li {
+        font-size: 0.938rem;
+    }
+}
+
+/* Tablet version (768px) */
+@media (min-width: 768px) {
+    article {
+        margin-bottom: 5.5rem;
+    }
+
+    section.pageIntro {
+        margin-left: 34px;
+    }
+
+    ol li {
+        font-size: 2rem;
+    }
+
+    ol li ol > li {
+        font-size: 1rem;
+    }
+}
+
+/* Laptop version (1024px) */
+@media (min-width: 1024px) {
+    article {
+        margin-bottom: 6.5rem;
+    }
+
+    section.pageIntro {
+        margin-left: 38px;
+    }
+
+    ol li {
+        font-size: 2.25rem;
+    }
+
+    ol li ol > li {
+        font-size: 1.063rem;
+    }
+}
+
+/* Larger laptop version (1280px) */
+@media (min-width: 1280PX) {
+    article {
+        margin-bottom: 7.5rem;
+    }
+
+    section.pageIntro {
+        margin-left: 42px;
+    }
+
+    ol li {
+        font-size: 2.5rem;
+    }
+
+    ol li ol > li {
+        font-size: 1.125rem;
+    }
+}
+
+/* Intermediate version of laptop and desktop (1600px) */
+@media (min-width: 1600PX) {
+    article {
+        max-width: 700px;
+        margin-bottom: 8.5rem;
+    }
+
+    section.pageIntro {
+        margin-left: 48px;
+    }
+
+    ol li {
+        font-size: 2.875rem;
+    }
+}
+
+/* Desktop version (1920px) */
+@media (min-width: 1920PX) {
+    article {
+        max-width: 750px;
+        margin-bottom: 9rem;
+    }
+
+    section.pageIntro {
+        margin-left: 52px;
+    }
+}

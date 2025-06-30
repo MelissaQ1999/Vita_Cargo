@@ -6,7 +6,6 @@
 @import 'main.css';
 @import 'header.css';
 @import 'footer.css';
-@import 'animaties.css';
 
 
 .contactHeader {
@@ -376,15 +375,11 @@ input.valid-border, textarea.valid-border {
     }
 }
 
-/* Intermediate version of laptop and desktop (1680px) */
-@media screen and (min-width: 1680PX) {
+/* Intermediate version of laptop and desktop (1600px) */
+@media screen and (min-width: 1600PX) {
     /* The Contact details */
     .contactDetails {
         gap: 3.5rem;
-
-        max-width: 1280px;
-        margin-left: auto;
-        margin-right: auto;
     }
     /*----------------------------------------*/
 
@@ -392,10 +387,6 @@ input.valid-border, textarea.valid-border {
     .contactForm {
         gap: 3.5rem;
         margin-bottom: 6.5rem;
-
-        max-width: 1280px;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     input[type="text"],
@@ -411,10 +402,6 @@ input.valid-border, textarea.valid-border {
     /* The Contact details */
     .contactDetails {
         gap: 4rem;
-
-        max-width: 1408px;
-        margin-left: auto;
-        margin-right: auto;
     }
     /*----------------------------------------*/
 
@@ -422,9 +409,5 @@ input.valid-border, textarea.valid-border {
     .contactForm {
         gap: 4rem;
         margin-bottom: 7.5rem;
-
-        max-width: 1408px;
-        margin-left: auto;
-        margin-right: auto;
     }
 }

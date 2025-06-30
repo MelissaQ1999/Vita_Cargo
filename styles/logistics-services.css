@@ -6,57 +6,66 @@
 @import 'main.css';
 @import 'header.css';
 @import 'footer.css';
-@import 'animaties.css';
 
 
 /*--------------------------------------------------
-    CSS for ...
+    CSS for the title and story
 ---------------------------------------------------*/
-/* Hero */
-.services-hero {
-  padding: 2rem 0;
-  background: var(--mintCream);
-  text-align: center;
+.servicesHeader {
+    text-align: center;
 }
 
-.services-hero h1 {
-  font-size: 1.75rem;
-  color: var(--spaceCadet);
-  margin-bottom: .5rem;
+.serviceStory p {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
 /*--------------------------------------------------
-    CSS for ...
+    CSS for the services detail cards
 ---------------------------------------------------*/
 /* Service cards */
-.services-detail {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin: 2rem 0;
+.servicesDetails {
+    display: grid;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1.5rem;
 }
 
-.service-detail {
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+.serviceDetail-card {
+    background: #FFF;
+    padding: 1.25rem 20px;
+    border-radius: 16px;
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
 }
 
-.service-detail h2 {
-  margin-bottom: .5rem;
-  color: var(--spaceCadet);
+.serviceDetail-card ul {
+    margin-left: 32px;
 }
 
-.service-detail p { color: #333; }
+.serviceDetail-card ul li {
+    list-style: disc;
+}
 
 
 /*--------------------------------------------------
-    CSS for ...
+    CSS for the call to action for contact
 ---------------------------------------------------*/
-/* CTA */
-.services-cta { text-align: center; margin-bottom: 3rem; }
+.customerAction {
+    background-color: #D8E7F8;
+    --child-width: 100vw;
+    margin-left: calc(-.5 * var(--child-width) + 50%);
+    width: var(--child-width);
+    margin-bottom: 2rem;
+}
+
+.actionContent {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
 
 
 /*--------------------------------------------------
@@ -65,48 +74,211 @@
 
 /* Intermediate version of mobile and tablet (480px) */
 @media screen and (min-width: 480px) {
-    
-}
+    /* The services detail cards */
+    .servicesDetails {
+        gap: 1.75rem;
+    }
 
-/* Additional intermediate version of mobile and tablet (510px) */
-@media (min-width: 510px) {
-    
+    .serviceDetail-card {
+        padding: 1.5rem 24px;
+    }
+    /*----------------------------------------*/
+
+    /* The call to action for contact */
+    .customerAction {
+        margin-bottom: 2.5rem;
+    }
+
+    .actionContent {
+        padding-top: 1.75rem;
+        padding-bottom: 1.75rem;
+    }
 }
 
 /* Tablet version (768px) */
 @media screen and (min-width: 768px) {
+    /* The services detail cards */
+    .servicesDetails {
+        gap: 2.125rem;
+    }
 
-    .services-detail {
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        gap: 2rem;
+    .serviceDetail-card {
+        padding: 2rem 28px;
+    }
+
+    .serviceDetail-card:nth-child(odd) {
+        grid-column: 1;
+    }
+
+    .serviceDetail-card:nth-child(even) {
+        grid-column: 2;
     }
     /*----------------------------------------*/
+
+    /* The call to action for contact */
+    .customerAction {
+        margin-bottom: 3.375rem;
+    }
+
+    .actionContent {
+        display: grid;
+        align-items: center;
+        gap: 2.125rem;
+        max-width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 2.125rem;
+        padding-bottom: 2.125rem;
+    }
+
+    .actionText {
+        grid-column: 1;
+        max-width: 675px;
+    }
+
+    .actionContent a {
+        grid-column: 2;
+    }
+
+    button.primary {
+        margin-top: 0;
+    }
 }
 
 /* Laptop version (1024px) */
 @media screen and (min-width: 1024px) {
-
-    .services-detail {
-        grid-template-columns: repeat(3,1fr);
+    /* The title and story */
+    .serviceStory p {
+        max-width: 750px;
     }
     /*----------------------------------------*/
+
+    /* The services detail cards */
+    .servicesDetails {
+        gap: 2.5rem;
+    }
+
+    .serviceDetail-card {
+        padding: 2.25rem 32px;
+    }
+    /*----------------------------------------*/
+
+    /* The call to action for contact */
+    .customerAction {
+        height: 100%;
+        width: 100%;
+        --child-width: 100%;
+        margin-left: auto;
+
+        border-radius: 16px;
+        margin-bottom: 4rem;
+    }
+
+    .actionContent {
+        gap: 2.5rem;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .actionText {
+        max-width: 700px;
+    }
+
+    .sectionBG {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
 }
 
 /* Larger laptop version (1280px) */
 @media screen and (min-width: 1280PX) {
-
+    /* The title and story */
+    .serviceStory p {
+        max-width: 800px;
+    }
     /*----------------------------------------*/
+
+    /* The services detail cards */
+    .servicesDetails {
+        gap: 3rem;
+    }
+
+    .serviceDetail-card {
+        padding: 2.5rem 36px;
+    }
+    /*----------------------------------------*/
+
+    /* The call to action for contact */
+    .customerAction {
+        margin-bottom: 4.5rem;
+    }
+
+    .actionContent {
+        gap: 3rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .sectionBG {
+        padding-left: 36px;
+        padding-right: 36px;
+    }
 }
 
-/* Intermediate version of laptop and desktop (1680px) */
-@media screen and (min-width: 1680PX) {
+/* Intermediate version of laptop and desktop (1600px) */
+@media screen and (min-width: 1600PX) {
+    /* The services detail cards */
+    .servicesDetails {
+        gap: 3.5rem;
+    }
 
+    .serviceDetail-card {
+        padding: 2.75rem 40px;
+    }
     /*----------------------------------------*/
+
+    /* The call to action for contact */
+    .customerAction {
+        margin-bottom: 5rem;
+    }
+
+    .actionContent {
+        gap: 3.5rem;
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+
+    .actionText {
+        max-width: 725px;
+    }
+
+    .sectionBG {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 /* Desktop version (1920px) */
 @media screen and (min-width: 1920PX) {
-    
+    /* The services detail cards */
+    .servicesDetails {
+        gap: 4rem;
+    }
+
+    .serviceDetail-card {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
     /*----------------------------------------*/
+
+    /* The call to action for contact */
+    .customerAction {
+        margin-bottom: 5.5rem;
+    }
+
+    .actionContent {
+        gap: 4rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
 }

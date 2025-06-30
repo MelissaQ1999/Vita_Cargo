@@ -53,7 +53,8 @@ main {
 .services {
     position: relative;
     z-index: 10;
-    margin: 2rem 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .service-cards {
@@ -135,7 +136,7 @@ main {
 }
 
 .sectionBG {
-    background: linear-gradient(180deg, #1C59A5 40%, #78AAE8 78%, #FFF 94%);
+    background: linear-gradient(180deg, #1C59A5 40%, #78AAE8 85%, #FFF 95%);
     background-color: #1C59A5;
 }
 
@@ -476,12 +477,6 @@ h2.app, .specialization-text h2, .specialization-text p, .key-points ul li h6, .
 /* Intermediate version of laptop and desktop (1600px) */
 @media (min-width: 1600PX) {
     /* The Hero Section */
-    .hero {
-        max-width: 1280px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
     .hero-content {
         gap: 3.5rem;
         padding-bottom: 2rem;
@@ -491,10 +486,6 @@ h2.app, .specialization-text h2, .specialization-text p, .key-points ul li h6, .
     /* The Services Section */
     .services {
         margin-top: 0;
-
-        max-width: 1280px;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     .service-cards {
@@ -521,10 +512,6 @@ h2.app, .specialization-text h2, .specialization-text p, .key-points ul li h6, .
     .specialization-grid {
         gap: 3.5rem;
         padding-bottom: 8.5rem;
-
-        max-width: 1280px;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     .key-points ul {
@@ -548,24 +535,12 @@ h2.app, .specialization-text h2, .specialization-text p, .key-points ul li h6, .
 /* Desktop version (1920px) */
 @media (min-width: 1920PX) {
     /* The Hero Section */
-    .hero {
-        max-width: 1408px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
     .hero-content {
         gap: 4rem;
     }
     /*----------------------------------------*/
 
     /* The Services Section */
-    .services {
-        max-width: 1408px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
     .service-cards {
         gap: 4rem;
     }
@@ -590,10 +565,6 @@ h2.app, .specialization-text h2, .specialization-text p, .key-points ul li h6, .
     .specialization-grid {
         gap: 4rem;
         padding-bottom: 9rem;
-
-        max-width: 1408px;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     .key-points ul {

@@ -5,14 +5,14 @@
 :root {
     /* button colors */
     --primary: #1C59A5;
-    --secondary: #ECECEC;
+    --secondary: #EBEBEB;
 
     /* status colors */
     --sucsess: #64B54F;
     --warning: #EA523C;
     
     /* other colours */
-    --battleshipGray: #8f8f8f;
+    --battleshipGray: #858585;
     --pumpkin: #F76F08;
     --forestGreen: #3B8B2A;
     --spaceCadet: #1C2849;
@@ -23,14 +23,14 @@
     :root {
      /* button colors */
     --primary: #1C59A5;
-    --secondary: #ECECEC;
+    --secondary: #EBEBEB;
 
     /* status colors */
     --sucsess: #64B54F;
     --warning: #EA523C;
     
     /* other colours */
-    --battleshipGray: #8f8f8f;
+    --battleshipGray: #858585;
     --pumpkin: #F76F08;
     --forestGreen: #3B8B2A;
     --spaceCadet: #1C2849;
@@ -47,7 +47,7 @@
 }
 
 html {
-    background-color: #FFF;
+    background-color: #FCFCFC;
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -63,7 +63,7 @@ html {
 }
 
 body { 
-    background-color: #FFF;
+    background-color: #FCFCFC;
     font-family: 'Inter', sans-serif;
     width: 100%;
     z-index: -100;
@@ -141,7 +141,7 @@ h6 {
     font-size: 1rem;
 }
 
-p, label, address {
+p, label, address, li {
     color: var(--spaceCadet);
     font-family: 'Inter', sans-serif;
     font-weight: normal;
@@ -382,7 +382,7 @@ a:hover {
         font-size: 1.125rem;
     }
     
-    p, a, address {
+    p, a, li, address {
         font-size: 0.938rem;
     }
     /*----------------------------------------*/
@@ -443,6 +443,9 @@ a:hover {
     button.primary, button.secondary {
         font-size: 1.063rem;
         margin-top: 1.625rem;
+        padding-left: 18px;
+        padding-right: 18px;
+        height: 2.75rem;
     }
 }
 
@@ -485,14 +488,14 @@ a:hover {
         font-size: 1.25rem;
     }
     
-    p, a, address {
+    p, a, li, address {
         font-size: 1rem;
     }
     /*----------------------------------------*/
 
     /* The distances within the content components */
     h1.pageTitle, h1.pageTitleSub, .topicGap {
-        margin-top: 4.125;
+        margin-top: 4.125rem;
     }
 
     .pageIntro {
@@ -545,9 +548,9 @@ a:hover {
     /* Button */
     button.primary, button.secondary {
         font-size: 1.125rem;
-        padding: 8px 20px;
+        padding: 8px 24px;
         margin-top: 1.875rem;
-        height: 2.75rem;
+        height: 3rem;
     }
 }
 
@@ -585,7 +588,7 @@ a:hover {
         font-size: 1.5rem;
     }
     
-    p, a, address {
+    p, a, li, address {
         font-size: 1.063rem;
     }
     /*----------------------------------------*/
@@ -691,7 +694,7 @@ a:hover {
         font-size: 1.375rem;
     }
     
-    p, a, address {
+    p, a, li, address {
         font-size: 1.125rem;
     }
     /*----------------------------------------*/
@@ -756,7 +759,7 @@ a:hover {
     button.primary, button.secondary {
         font-size: 1.25rem;
         margin-top: 2.375rem;
-        height: 3rem;
+        height: 3.25rem;
     }
 }
 
@@ -770,6 +773,13 @@ a:hover {
     main {
         padding-left: 200px;
         padding-right: 200px;
+    }
+
+    /* General styling for sections*/
+    .container {
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
     }
     /*----------------------------------------*/
 
@@ -854,7 +864,7 @@ a:hover {
     /* Button */
     button.primary, button.secondary {
         margin-top: 2.75rem;
-        height: 3.25rem;
+        height: 3.5rem;
     }
 }
 
@@ -868,6 +878,11 @@ a:hover {
     main {
         padding-left: 256px;
         padding-right: 256px;
+    }
+
+    /* General styling for sections*/
+    .container {
+        max-width: 1408px;
     }
     /*----------------------------------------*/
 

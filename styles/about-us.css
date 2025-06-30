@@ -6,161 +6,299 @@
 @import 'main.css';
 @import 'header.css';
 @import 'footer.css';
-@import 'animaties.css';
 
 
 /*--------------------------------------------------
-    CSS for ...
+    CSS for the title and story
 ---------------------------------------------------*/
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
+.aboutUsHeader {
+    text-align: center;
 }
 
-/* Hero */
-.page-hero {
-  padding: 2rem 0;
-  background: var(--mintCream);
-  text-align: center;
-}
-
-.page-hero h1 {
-  font-size: 1.75rem;
-  color: var(--spaceCadet);
-  margin-bottom: .5rem;
-}
-
-.page-hero p {
-  color: #555;
-  font-size: 1rem;
+.ourStory p {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
 /*--------------------------------------------------
-    CSS for ...
+    CSS for the mission and vision pieces
 ---------------------------------------------------*/
-.about-history {
-  margin-top: 2rem;
+.missionVision {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1.5rem;
 }
 
-.about-history h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.about-history p {
-  margin-bottom: 1rem;
-  color: #333;
-}
-
-.timeline {
-  list-style: none;
-  padding: 0;
-}
-
-.timeline li {
-  position: relative;
-  padding-left: 1rem;
-  margin-bottom: .75rem;
-  border-left: 3px solid var(--primary);
-}
-
-.timeline li strong {
-  color: var(--primary);
+.missionVision-card1, .missionVision-card2 {
+    background: #FFF;
+    padding: 1.25rem 20px;
+    border-radius: 16px;
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    flex-basis: 100%;
+    max-width: 500px;
 }
 
 
 /*--------------------------------------------------
-    CSS for ...
+    CSS for the core values
 ---------------------------------------------------*/
-.about-values {
-  margin: 3rem 0;
-  text-align: center;
-}
-
-.about-values h2 {
-  font-size: 1.5rem;
-  color: var(--spaceCadet);
-  margin-bottom: 1rem;
-}
-
-.about-values p {
-  margin-bottom: 1rem;
-  color: #333;
+.values {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .values-list {
-  list-style: none;
-  padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
 }
 
-.values-list li {
-  margin-bottom: .75rem;
-  text-align: left;
-  max-width: 600px;
-  margin: auto;
+
+/*--------------------------------------------------
+    CSS for the call to action for contact
+---------------------------------------------------*/
+.customerAction {
+    background-color: #D8E7F8;
+    --child-width: 100vw;
+    margin-left: calc(-.5 * var(--child-width) + 50%);
+    width: var(--child-width);
+    margin-bottom: 2rem;
 }
 
-.values-list strong {
-  color: var(--primary);
+.actionContent {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
-
 
 /*--------------------------------------------------
     The breakpoints
 ---------------------------------------------------*/
 
-/* Intermediate version of mobile and tablet (450px) */
-@media screen and (min-width: 450px) {
-    
-}
+/* Intermediate version of mobile and tablet (480px) */
+@media screen and (min-width: 480px) {
+    /* The mission and vision pieces */
+    .missionVision {
+        gap: 1.75rem;
+    }
+    /*----------------------------------------*/
 
-/* Additional intermediate version of mobile and tablet (510px) */
-@media (min-width: 510px) {
-    
+    /* The core values */
+    .values-list {
+        gap: 1.5rem;
+        margin-top: 1.75rem;
+    }
+    /*----------------------------------------*/
+
+    /* The call to action for contact */
+    .customerAction {
+        margin-bottom: 2.5rem;
+    }
+
+    .actionContent {
+        padding-top: 1.75rem;
+        padding-bottom: 1.75rem;
+    }
 }
 
 /* Tablet version (768px) */
 @media screen and (min-width: 768px) {
-
-    .page-hero {
-        text-align: left;
-        padding: 3rem 0;
+    /* The mission and vision pieces */
+    .missionVision {
+        flex-wrap: nowrap;
+        gap: 2.125rem;
     }
 
-    .about-history .timeline, .values-list {
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        gap: 1.5rem;
-    }
-
-    .about-history, .about-values {
-        text-align: left;
+    .missionVision-card1, .missionVision-card2 {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        flex-basis: 50%;
     }
     /*----------------------------------------*/
+
+    /* The core values */
+    .values-list {
+        gap: 1.75rem;
+        margin-top: 2.125rem;
+    }
+    /*----------------------------------------*/
+
+    /* The call to action for contact */
+    .customerAction {
+        margin-bottom: 3.375rem;
+    }
+
+    .actionContent {
+        display: grid;
+        align-items: center;
+        gap: 2.125rem;
+        max-width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 2.125rem;
+        padding-bottom: 2.125rem;
+    }
+
+    .actionText {
+        grid-column: 1;
+        max-width: 675px;
+    }
+
+    .actionContent a {
+        grid-column: 2;
+    }
+
+    button.primary {
+        margin-top: 0;
+    }
 }
 
 /* Laptop version (1024px) */
 @media screen and (min-width: 1024px) {
-
+    /* The title and story */
+    .ourStory p {
+        max-width: 750px;
+    }
     /*----------------------------------------*/
+
+    /* The mission and vision pieces */
+    .missionVision {
+        gap: 2.5rem;
+    }
+    /*----------------------------------------*/
+
+    /* The core values */
+    .values-list {
+        gap: 2rem;
+        margin-top: 2.5rem;
+    }
+    /*----------------------------------------*/
+
+    /* The call to action for contact */
+    .customerAction {
+        height: 100%;
+        width: 100%;
+        --child-width: 100%;
+        margin-left: auto;
+
+        border-radius: 16px;
+        margin-bottom: 4rem;
+    }
+
+    .actionContent {
+        gap: 2.5rem;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .actionText {
+        max-width: 700px;
+    }
+
+    .sectionBG {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
 }
 
 /* Larger laptop version (1280px) */
 @media screen and (min-width: 1280PX) {
-
+    /* The title and story */
+    .ourStory p {
+        max-width: 800px;
+    }
     /*----------------------------------------*/
+
+    /* The mission and vision pieces */
+    .missionVision {
+        gap: 3rem;
+    }
+    /*----------------------------------------*/
+
+    /* The core values */
+    .values-list {
+        gap: 2.25rem;
+        margin-top: 3rem;
+    }
+    /*----------------------------------------*/
+
+    /* The call to action for contact */
+    .customerAction {
+        margin-bottom: 4.5rem;
+    }
+
+    .actionContent {
+        gap: 3rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .sectionBG {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
-/* Intermediate version of laptop and desktop (1680px) */
-@media screen and (min-width: 1680PX) {
-
+/* Intermediate version of laptop and desktop (1600px) */
+@media screen and (min-width: 1600PX) {
+    /* The mission and vision pieces */
+    .missionVision {
+        gap: 3.5rem;
+    }
     /*----------------------------------------*/
+
+    /* The core values */
+    .values-list {
+        gap: 2.5rem;
+        margin-top: 3.5rem;
+    }
+    /*----------------------------------------*/
+
+    /* The call to action for contact */
+    .customerAction {
+        margin-bottom: 5rem;
+    }
+
+    .actionContent {
+        gap: 3.5rem;
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+
+    .actionText {
+        max-width: 725px;
+    }
 }
 
 /* Desktop version (1920px) */
 @media screen and (min-width: 1920PX) {
-    
+    /* The mission and vision pieces */
+    .missionVision {
+        gap: 4rem;
+    }
     /*----------------------------------------*/
+
+    /* The core values */
+    .values-list {
+        gap: 2.75rem;
+        margin-top: 4rem;
+    }
+    /*----------------------------------------*/
+
+    /* The call to action for contact */
+    .customerAction {
+        margin-bottom: 5.5rem;
+    }
+
+    .actionContent {
+        gap: 4rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
 }
