@@ -297,6 +297,7 @@ input.valid-border, textarea.valid-border {
         --child-width: 100%;
         margin-left: 0;
         box-shadow: none;
+        border-radius: 16px;
     }
 
     .contactItems {
@@ -330,6 +331,8 @@ input.valid-border, textarea.valid-border {
         width: 100%;
         --child-width: 100%;
         margin-left: 0;
+
+        border-radius: 16px;
     }
 
     form {
