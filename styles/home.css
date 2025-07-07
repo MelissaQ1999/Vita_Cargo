@@ -260,10 +260,10 @@ h2.app, .specialization-text h2, .specialization-text p, .key-points ul li h6, .
         border-radius: 24px 0px 0px 0px;
     }
 
-    .hero-image img {
+    /* .hero-image img {
         position: relative;
         display: block;
-    }
+    } */
     /*----------------------------------------*/
 
     /* The Services Section */
@@ -366,9 +366,17 @@ h2.app, .specialization-text h2, .specialization-text p, .key-points ul li h6, .
         gap: 2.5rem;
     }
 
+    .hero-text {
+        margin-bottom: 10%;
+    }
+
     /*----------------------------------------*/
 
     /* The Services Section */
+    .services {
+        margin-top: -6rem;
+    }
+
     .service-cards {
         gap: 2.5rem;
     }
@@ -404,33 +412,15 @@ h2.app, .specialization-text h2, .specialization-text p, .key-points ul li h6, .
     }
 }
 
-@media (min-width: 1190px) {
-    /* The Hero Section */
-    .hero-content {
-        padding-bottom: 3rem;
-    }
-    /*----------------------------------------*/
-
-    /* The Services Section */
-    .services {
-        margin-top: -9rem;
-    }
-}
-
 /* Larger laptop version (1280px) */
 @media (min-width: 1280PX) {
     /* The Hero Section */
     .hero-content {
         gap: 3rem;
-        padding-bottom: 2rem;
     }
     /*----------------------------------------*/
 
     /* The Services Section */
-    .services {
-        margin-top: 0;
-    }
-
     .service-cards {
         gap: 3rem;
     }
@@ -461,33 +451,15 @@ h2.app, .specialization-text h2, .specialization-text p, .key-points ul li h6, .
     }
 }
 
-@media (min-width: 1390px) {
-    /* The Hero Section */
-    .hero-content {
-        padding-bottom: 4rem;
-    }
-    /*----------------------------------------*/
-
-    /* The Services Section */
-    .services {
-        margin-top: -9rem;
-    }
-}
-
 /* Intermediate version of laptop and desktop (1600px) */
 @media (min-width: 1600PX) {
     /* The Hero Section */
     .hero-content {
         gap: 3.5rem;
-        padding-bottom: 2rem;
     }
     /*----------------------------------------*/
 
     /* The Services Section */
-    .services {
-        margin-top: 0;
-    }
-
     .service-cards {
         gap: 3.5rem;
     }
@@ -516,19 +488,6 @@ h2.app, .specialization-text h2, .specialization-text p, .key-points ul li h6, .
 
     .key-points ul {
         gap: 3.5rem;
-    }
-}
-
-@media (min-width: 1690px) {
-    /* The Hero Section */
-    .hero-content {
-        padding-bottom: 3rem;
-    }
-    /*----------------------------------------*/
-
-    /* The Services Section */
-    .services {
-        margin-top: -9rem;
     }
 }
 

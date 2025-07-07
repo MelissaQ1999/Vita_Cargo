@@ -179,7 +179,7 @@ input.valid-border, textarea.valid-border {
 /*--------------------------------------------------
     The breakpoints
 ---------------------------------------------------*/
-@media (min-width: 345px) {
+@media (min-width: 366px) {
     /* The Contact details */
     .contactItems {
         display: grid;

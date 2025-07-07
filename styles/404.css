@@ -1,0 +1,90 @@
+/*---------------------------------------------------------------------------------
+    In this CSS file you will find the style for the 404 page
+----------------------------------------------------------------------------------*/
+
+/* Here you can import all stylesheets */
+@import 'main.css';
+@import 'header.css';
+@import 'footer.css';
+
+/* The area before the main content is edited here */
+body {
+    background: #FFF;
+}
+
+
+/*--------------------------------------------------
+    CSS for the notification
+---------------------------------------------------*/
+.page_404 {
+    background: #FFF;
+    font-family: 'Inter', sans-serif;
+}
+
+.four_zero_four_bg {
+    background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    --child-width: 100vw;
+    margin-left: calc(-.5 * var(--child-width) + 50%);
+    width: var(--child-width);
+}
+ 
+h1, .return_box_404 h3, .return_box_404 p {
+    text-align: center;
+}
+
+.return_box_404 {
+    justify-items: center;
+}
+
+footer {
+    margin-top: 3.5rem;
+}
+
+
+/*--------------------------------------------------
+    The breakpoints
+---------------------------------------------------*/
+/* Intermediate version of mobile and tablet (480px) */
+@media screen and (min-width: 480px) {
+    footer {
+        margin-top: 4.25rem;
+    }
+}
+
+/* Tablet version (768px) */
+@media screen and (min-width: 768px) {
+    footer {
+        margin-top: 5.5rem;
+    }
+}
+
+/* Laptop version (1024px) */
+@media screen and (min-width: 1024px) {
+    footer {
+        margin-top: 6.5rem;
+    }
+}
+
+/* Larger laptop version (1280px) */
+@media screen and (min-width: 1280PX) {
+    footer {
+        margin-top: 7.5rem;
+    }
+}
+
+/* Intermediate version of laptop and desktop (1600px) */
+@media screen and (min-width: 1600PX) {
+    footer {
+        margin-top: 8.5rem;
+    }
+}
+
+/* Desktop version (1920px) */
+@media screen and (min-width: 1920PX) {
+    footer {
+        margin-top: 9rem;
+    }
+}
