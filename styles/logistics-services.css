@@ -72,11 +72,13 @@
 }
 
 .serviceDetail-card ul {
-    margin-left: 32px;
+    padding-inline-start: 8%;
 }
 
 .serviceDetail-card ul li {
+    display: list-item;
     list-style: disc;
+    list-style-position: outside;
 }
 
 

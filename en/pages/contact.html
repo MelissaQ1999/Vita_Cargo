@@ -34,7 +34,7 @@
         <meta property="og:title" content="Contact - Get in touch with Vita Cargo">
         <meta property="og:site_name" content="Vita Cargo">
         <meta property="og:description" content="Call us at +31 10 324 0800, mail to info@vitacargo.com or fill in the form. Your cargo. Our mission! - Vita Cargo B.V.">
-        <meta property="og:image" content="../../assets/images/Cargo_Ship_at_Sunset_OG.jpg">
+        <meta property="og:image" content="../../assets/images/cargo-ship-at-sunset-OG.jpg">
         <meta property="og:image:type" content="image/jpg">
         <meta property="og:url" content="https://www.vitacargo.com/en/pages/contact.html">
 
@@ -43,7 +43,7 @@
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="Contact - Get in touch with Vita Cargo">
         <meta name="twitter:description" content="Call us at +31 10 324 0800, mail to info@vitacargo.com or fill in the form. Your cargo. Our mission! - Vita Cargo B.V.">
-        <meta name="twitter:image" content="../../assets/images/Cargo_Ship_at_Sunset_OG.jpg">
+        <meta name="twitter:image" content="../../assets/images/cargo-ship-at-sunset-OG.jpg">
 
         <!-- CSS en JavaScript files
         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -159,7 +159,7 @@
             </section>
 
             <!-- Contact details -->
-            <section class="contactDetails beginningGap">
+            <section class="contactDetails beginningGap container">
                 <div class="contactItems">
                     <h3 class="contactItem">Contact information</h3>
                     <div class="contactItem">
@@ -188,15 +188,17 @@
             </section>
 
             <!-- Form -->
-            <section class="contactForm topicGap">
+            <section class="contactForm topicGap container">
                 <!-- Intro text for the form -->
                 <div class="contactIntro">
-                    <h2>Please feel free to contact us without any obligation</h2>
-                    <p class="H2textGap">Have any questions, comments or interest? Fill out the contact form and we&apos;ll get in touch with you as soon as possible.</p>
+                    <h2>Feel free to contact us without any obligation</h2>
+                    <p class="H2textGap">
+                        <b>Have any questions, comments or interest?</b> Get in touch with us by phone or email, or fill out the contact form.
+                    </p>
                 </div>
 
                 <div class="formContainer">
-                    <form id="generalForm" action="../../scripts/form-handler.php" method="post" autocomplete="on" novalidate>
+                    <form data-aos="fade-left" id="generalForm" action="../../scripts/form-handler.php" method="post" autocomplete="on" novalidate>
                         <fieldset>
                             <input type="hidden" name="lang" value="en">
                             <label for="name">Name*</label>
@@ -289,7 +291,7 @@
         <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
         <script>
             // AOS initialisatie
-            AOS.init();
+            AOS.init({once: true});
         </script>
     </body>
 

@@ -323,9 +323,11 @@
     .reasons figure {
         grid-column: 2;
         display: block;
-        height: auto;
+        border-radius: 24px;
+        overflow: hidden;
+        height: 100%;
         width: 100%;
-        max-width: 550px;
+        max-width: 675px;
     }
 
     .reasons figure img {

@@ -7,7 +7,7 @@
 @import 'header.css';
 @import 'footer.css';
 
-* {
+main {
     list-style: auto;
 }
 
@@ -16,7 +16,7 @@ main h1 {
 }
 
 article {
-    max-width: 650px;
+    max-width: 660px;
     margin-bottom: 3.5rem;
 }
 
@@ -51,11 +51,6 @@ ol li ol > li {
 ol li ol > li::marker { content: counters(list-item, ".") " "; }
 
 /* The layout of the table */
-table.abc {
-    position: relative;
-    width: 100%;
-}
-
 table, td {
     border: none;
     border-collapse: collapse;

@@ -132,7 +132,6 @@ main {
     position: relative;
     width: 100%;
     height: 80px;
-    z-index: -10;
 }
 
 .sectionBG {
@@ -171,7 +170,7 @@ h2.web {
     object-position: bottom;
 }
 
-h2.app, .specialization-text h2, .specialization-text p, .key-points ul li h6, .key-points ul li p {
+h2.app, .specialization-text h2, .specialization-text p, .key-point h6, .key-point p {
     color: #FFF;
     text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
 }
@@ -191,7 +190,7 @@ h2.app, .specialization-text h2, .specialization-text p, .key-points ul li h6, .
     text-align: left;
 }
 
-.key-points li {
+.key-point {
     margin-bottom: 1rem;
 }
 
@@ -340,14 +339,14 @@ h2.app, .specialization-text h2, .specialization-text p, .key-points ul li h6, .
         margin-top: 2rem;
     }
 
-    .key-points ul {
+    .key-points-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2.125rem;
         align-items: center;
     }
 
-    .key-points li {
+    .key-point {
         margin-bottom: 0;
     }
 
@@ -407,7 +406,7 @@ h2.app, .specialization-text h2, .specialization-text p, .key-points ul li h6, .
         padding-bottom: 6.5rem;
     }
 
-    .key-points ul {
+    .key-points-grid {
         gap: 2.5rem;
     }
 }
@@ -446,7 +445,7 @@ h2.app, .specialization-text h2, .specialization-text p, .key-points ul li h6, .
         padding-bottom: 7.5rem;
     }
 
-    .key-points ul {
+    .key-points-grid {
         gap: 3rem;
     }
 }
@@ -486,7 +485,7 @@ h2.app, .specialization-text h2, .specialization-text p, .key-points ul li h6, .
         padding-bottom: 8.5rem;
     }
 
-    .key-points ul {
+    .key-points-grid {
         gap: 3.5rem;
     }
 }
@@ -526,7 +525,7 @@ h2.app, .specialization-text h2, .specialization-text p, .key-points ul li h6, .
         padding-bottom: 9rem;
     }
 
-    .key-points ul {
+    .key-points-grid {
         gap: 4rem;
     }
 }
