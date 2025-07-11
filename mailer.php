@@ -1,0 +1,60 @@
+<?php
+//Import PHPMailer classes into the global namespace
+//These must be at the top of your script, not inside a function
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+//Load Composer's autoloader
+require '../vendor/autoload.php';
+
+function send_email_helper($to, $subject, $html_body, $plain_body){
+
+
+
+    //Create an instance; passing `true` enables exceptions
+    //$mail = new PHPMailer(true);
+
+    try {
+        // TODO: set email settings
+        //Server settings
+        //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+        //$mail->isSMTP();                                            //Send using SMTP
+        //$mail->Host       = 'localhost';                      //Set the SMTP server to send through
+        //$mail->SMTPAuth   = false;                                   //Enable SMTP authentication
+        //$mail->Username   = 'info@vitacargo.com';                     //SMTP username
+        //$mail->Password   = 'secret';                               //SMTP password
+        //$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable implicit TLS encryption
+        //$mail->Port       = 25;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+
+        //Recipients
+        //$mail->setFrom('no-reply@vitacargo.com', 'Mailer');
+        // $mail->addAddress('joe@example.net', 'Joe User');        //Add a recipient
+        //$mail->addAddress($to);                                     //Name is optional
+        //$mail->addReplyTo('info@vitacargo.com', 'Information');
+        // $mail->addCC('cc@example.com');
+        // $mail->addBCC('bcc@example.com');
+
+        //Attachments
+        // $mail->addAttachment('/var/tmp/file.tar.gz');            //Add attachments
+        // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');       //Optional name
+
+        //Content
+        //$mail->isHTML(true);                                        //Set email format to HTML
+        //$mail->Subject = $subject;
+        //$mail->Body    = $html_body;
+        //$mail->AltBody = $plain_body;
+
+        //$mail->send();
+
+	//use sendmail
+	$headers = "from: info@vitacargo.com";
+	mail($to, $subject, $plain_body, $headers);
+	
+        return 204;
+    } catch (Exception $e) {
+        // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        throw new ErrorException("An error occurred while sending the email.");
+    }
+
+};

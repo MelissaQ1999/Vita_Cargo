@@ -106,7 +106,11 @@ if (!empty($errors)) {
     // Mail settings
     send_email_helper($to, $subject, $email_body, $email_body_text );
         
-    // Redirect to contact page
-    header('Location:../pages/contact_succes.html', true, 303);
+    // Redirect to success page based on language
+    if ($lang === 'en') {
+        header('Location:../en/pages/contact_success.html', true, 303);
+    } else {
+        header('Location:../pages/contact_succes.html', true, 303);
+    }
     exit;
 }

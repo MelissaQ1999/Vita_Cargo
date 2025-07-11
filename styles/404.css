@@ -12,6 +12,10 @@ body {
     background: #FFF;
 }
 
+main {
+    overflow-x: visible;
+}
+
 
 /*--------------------------------------------------
     CSS for the notification
@@ -46,6 +50,12 @@ h1, .return_box_404 h3, .return_box_404 p {
 
 .return_box_404 {
     justify-items: center;
+}
+
+.link_404 {
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 footer {
