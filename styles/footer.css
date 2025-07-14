@@ -61,17 +61,22 @@ footer {
 /* The layout of the logo and the socials */
 .footSocials img {
     height: 75px;
-    /* margin-bottom: 16px; */
+    margin-bottom: 16px;
 }
 
-.socials {
+a i.fa-facebook, a i.fa-instagram, a i.fa-youtube {
     display: none;
 }
 
 .socials a {
-    margin-right: 0.5rem;
+    /* margin-right: 0.5rem; */
     font-size: 1.85rem;
     color: var(--spaceCadet);
+}
+
+.socials a:hover {
+    color: var(--primary);
+    cursor: pointer;
 }
 
 /* The layout of the menu items */

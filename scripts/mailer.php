@@ -46,6 +46,7 @@ function send_email_helper($to, $subject, $html_body, $plain_body){
         $mail->AltBody = $plain_body;
 
         $mail->send();
+        
         return 204;
     } catch (Exception $e) {
         // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
